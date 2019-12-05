@@ -5,6 +5,7 @@ ShowMessages();
 
 ?>
 <body class="main">
+<?php PrintNavBar(); ?>
 
 <main class="container">
     <h1>Add new graphic</h1>

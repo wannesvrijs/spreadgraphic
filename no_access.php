@@ -6,6 +6,7 @@ BasicHead();
 
 ?>
 <body>
+<?php PrintNavBar(); ?>
 
 <div class="jumbotron text-center">
     <h1>Geen toegang!</h1>
