@@ -9,7 +9,6 @@ ShowMessages();
 <div class="jumbotron text-center">
     <h1>Vacatures</h1>
     <p>anneleen was hier jow swag</p>
-    <p>de tweede poging </p>
 </div>
 
 <?php PrintNavBar(); ?>
