@@ -80,7 +80,7 @@ if ( $_POST["submitbutton"] == "Spread!" )
                     " gra_description='" . htmlentities($_POST['gra_description'], ENT_QUOTES) . "' , " .
                     " gra_tags='" . htmlentities($_POST['gra_tags'], ENT_QUOTES) . "' , " .
                     " gra_uploaddate = NOW()";
-                
+
                 if (ExecuteSQL($sql)) {
                     $_SESSION["msg"][] = "uw werk werd toegevoed!";
 
