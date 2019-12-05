@@ -10,7 +10,7 @@ if ( $formname == "loginform" AND $buttonvalue == "Log in" )
     if ( ControleLoginWachtwoord( $_POST['use_email'], $_POST['use_paswd'] ) )
     {
         $_SESSION["msg"][] = "Welkom, " . $_SESSION['use']['use_firstname'] . "!" ;
-        header("Location: /oef62/steden.php");
+        header("Location: /spreadgraphic/index.php");
     }
     else
     {
