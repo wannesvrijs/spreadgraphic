@@ -5,6 +5,7 @@ require_once "lib/autoload.php";
 BasicHead();
 ?>
 <body class="main">
+<?php PrintNavBar(); ?>
 
 <main class="container">
     <h1>New account</h1>
