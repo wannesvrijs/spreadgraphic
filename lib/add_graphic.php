@@ -1,35 +1,103 @@
 <?php
 require_once "autoload.php";
 
-$tablename = $_POST["tablename"];
+//$tablename = $_POST["tablename"];
+//$formname = $_POST["formname"];
+//$afterinsert = $_POST["afterinsert"];
+//$pkey = $_POST["pkey"];
+//
+//if ( $_POST["submitbutton"] == "Spread!" )
+//{
+//    $file = $_FILES['use_img'];
+//
+//    $fileName = $file['name'];
+//    $fileTmpName = $file['tmp_name'];
+//    $fileSize = $file['size'];
+//    $fileError = $file['error'];
+//    $fileType = $file['type'];
+//
+//    $fileExt = explode('.', $fileName);
+//    $fileActualExt = strtolower(end($fileExt));
+//
+//    $allowed = array('jpg','jpeg','png');
+//
+//    if (in_array($fileActualExt, $allowed)) {
+//        if ($fileError === 0) {
+//            if ($fileSize < 5000000) {
+//                $fileNameNew = uniqid('',true).".".$fileActualExt;
+//                $fileDestination = '../uploads/'. $fileNameNew;
+//
+//
+//                move_uploaded_file($fileTmpName, $fileDestination);
+//                $_SESSION["msg"][] = "upload succes";
+//            } else {
+//                $_SESSION["msg"][] = "your image exceeds the maximum file size";
+//            }
+//        } else {
+//            $_SESSION["msg"][] = "there was an error uploading your file";
+//        }
+//    } else {
+//        $_SESSION["msg"][] = "no files of this kind are allowed";
+//    }
+//}
+
+
+
 $formname = $_POST["formname"];
-$afterinsert = $_POST["afterinsert"];
+$tablename = $_POST["tablename"];
 $pkey = $_POST["pkey"];
 
 if ( $_POST["submitbutton"] == "Spread!" )
 {
-    $sql_body = array();
+    $file = $_FILES['use_img'];
 
-    //key-value pairs samenstellen
-    foreach( $_POST as $field => $value )
-    {
-        if ( in_array($field, array("tablename", "formname", "afterinsert", "pkey", "submitbutton", $pkey))) continue;
+    $fileName = $file['name'];
+    $fileTmpName = $file['tmp_name'];
+    $fileSize = $file['size'];
+    $fileError = $file['error'];
+    $fileType = $file['type'];
 
-        $sql_body[]  = " $field = '" . htmlentities($value, ENT_QUOTES) . "' " ;
+    $fileExt = explode('.', $fileName);
+    $fileActualExt = strtolower(end($fileExt));
+    $fileNameNew = uniqid('',true).".".$fileActualExt;
+
+    $allowed = array('jpg','jpeg','png');
+
+    if (in_array($fileActualExt, $allowed)) {
+        if ($fileError === 0) {
+            if ($fileSize < 500000) {
+                $fileDestination = '../uploads/'. $fileNameNew;
+
+//              verplaats file naar folder uploads
+                move_uploaded_file($fileTmpName, $fileDestination);
+
+//              denk er goed aan dat de tags nog moeten worden toegevoegd
+
+//                insert alle ingegeven data (inclusief gra_img - naam) in dat databank;
+                $sql = "INSERT INTO $tablename SET " .
+                    " gra_use_id='" . $_SESSION['use_id'] . "' , " .
+                    " gra_image='" . $fileNameNew . "' , " .
+                    " gra_description='" . htmlentities($_POST['gra_description'], ENT_QUOTES) . "' , " .
+                    " gra_tags='" . htmlentities($_POST['gra_tags'], ENT_QUOTES) . "' , " .
+                    " gra_uploaddate = NOW()";
+
+                if (ExecuteSQL($sql)) {
+                    $_SESSION["msg"][] = "uw werk werd toegevoed!";
+
+                } else {
+                    $_SESSION["msg"][] = "Sorry, er liep iets fout. uw werk werd niet toegevoed";
+                }
+
+            } else {
+                $_SESSION["msg"][] = "your image exceeds the maximum file size";
+            }
+        } else {
+            $_SESSION["msg"][] = "there was an error uploading your file";
+        }
+    } else {
+        $_SESSION["msg"][] = "no files of this kind are allowed";
     }
-
-    if ( $_POST[$pkey] > 0 ) //update
-    {
-        $sql = "UPDATE $tablename SET " . implode( ", " , $sql_body ) . " WHERE $pkey=" . $_POST[$pkey];
-        if ( ExecuteSQL($sql) ) $new_url =  "/oef31/$formname.php?id=" . $_POST[$pkey] . "&updateOK=true" ;
-    }
-    else //insert
-    {
-        $sql = "INSERT INTO $tablename SET " . implode( ", " , $sql_body );
-        if ( ExecuteSQL($sql) ) $new_url = "/oef31/$afterinsert?insertOK=true" ;
-    }
-
-    print $sql;
-    header("Location: $new_url");
 }
-?>
+
+
+
