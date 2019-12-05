@@ -1,0 +1,44 @@
+
+.headerbalk {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* logo */
+.navbarlogo img {
+    width: 200px;
+    margin: 2.4em 2em;
+}
+
+/* navigatie  */
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    padding: 0 2em; /* padding bij li voor hover border */
+}
+
+nav a {
+    color: #1D1D1D;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    line-height: 100px;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    padding: 0 0 2px 0; /* padding voor oranje onderlijning */
+    border-bottom: 3px solid #FF5100;
+    color: #1D1D1D;
+    text-decoration: none;
+}
+
+
+
+
+

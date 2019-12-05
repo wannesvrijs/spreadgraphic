@@ -1,0 +1,106 @@
+
+.topfive h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    width: 270px;
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 auto;
+}
+
+/* GRID
+-------------------------------------------------------------- */
+.topfive section.grid {
+    display: grid;
+    grid-template-rows: 400px 130px;
+    grid-template-columns: 2fr 4fr 1fr 4fr 1fr;
+    grid-gap: 10px;
+    margin: 80px auto 0 auto;
+}
+
+/* ELEMENT 1: nummer */
+.topfive .grid div:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    color: #1D1D1D;
+    padding-left: 65%;
+}
+
+/* ELEMENT 2: afbeelding  */
+.topfive .grid  div:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    width: 100% ;
+}
+
+/* ELEMENT 3: leeg item tussen beschrijving en afbeelding */
+.topfive .grid div:nth-of-type(3) {
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+/* ELEMENT 4: graphic details */
+.topfive .grid div:nth-of-type(4) {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.3;
+}
+
+.topfive .grid .graphicdetail p{
+    margin-bottom: 20px;
+}
+
+.topfive .grid .graphicdetail p span {
+    font-weight: 600;
+}
+
+.topfive .grid .graphicdetail p.tags {
+    color: #ff5100;
+    font-weight: 600;
+}
+
+.topfive .graphicdetail img {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    overflow: hidden
+}
+
+/* ELEMENT 5: artist detail */
+.topfive .grid div:nth-of-type(5){
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.topfive .grid .artisttext {
+    display: flex;
+}
+
+.topfive .grid .artisttext img {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.topfive .grid .artisttext p {
+    margin-left: 1.5em;
+    margin-top: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.topfive .grid .artisttext p span {
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+

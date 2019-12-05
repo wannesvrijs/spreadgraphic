@@ -1,0 +1,10 @@
+@import "https://fonts.googleapis.com/css?family=Merriweather:400,900&display=swap";
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&display=swap";
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}

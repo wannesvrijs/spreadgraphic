@@ -1,0 +1,41 @@
+/* zoekbalk */
+
+.zoekbalk {
+    display: flex;
+    justify-content: center;
+}
+
+.zoekbalk input {
+    padding: 25px;
+    border: none;
+    border-radius: 60px;
+    background-color: #E6E6E6;
+    width: 400px;
+    font-size: 1.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 50px;
+    outline: none; /* border bij klikken verwijderen */
+    margin-bottom: 70px;
+}
+
+.zoekbalk input::placeholder {
+    color: #FF5100;
+    font-size: 1.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+
+/* feed */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
