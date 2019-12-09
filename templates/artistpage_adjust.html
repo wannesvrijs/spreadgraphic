@@ -1,0 +1,65 @@
+<main class="container">
+    <h1>Profile Settings</h1>
+
+    <form class="col-grid-12 profileform" action="lib/updateprofile.php" method="post">
+
+        <input type="hidden" id="formname" name="formname" value="profileform">
+        <input type="hidden" id="tablename" name="tablename" value="user">
+        <input type="hidden" id="pkey" name="pkey" value="usr_id">
+
+        <figure class="img-container">
+            <img src="images/profiel.png" alt="profilepicture">
+            <figcaption>
+                <label for="profielfoto">Upload new image</label>
+                <input id="profielfoto" type="file" name="use_img" value="@@use_img@@">
+            </figcaption>
+        </figure>
+
+        <ul>
+            <div class="requiredinfo">
+                <li>
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="use_firstname" value="@@use_firstname@@" title="First Name" required>
+                </li>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="use_name" value="@@use_name@@" title="Name" required>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="use_email" value="@@use_email@@" title="Email" required >
+                </li>
+            </div>
+            <div class="extrainfo">
+                <li>
+                    <label for="education">Education</label>
+                    <input type="text" id="education" name="use_education" value="@@use_education@@" title="Education">
+                </li>
+                <li>
+                    <label for="caption">Caption <br> <span class="subtext">(100 Char)</span></label>
+                    <textarea class="short" id="caption" name="use_caption" value="@@use_caption@@" title="Captiontext" maxlength="100"></textarea>
+                </li>
+                <li>
+                    <label for="about">About <br> <span class="subtext">(400 Char)</span></label>
+                    <textarea class="long" id="about" name="use_about" value="@@use_about@@" title="About yourself" maxlength="400"></textarea>
+                </li>
+            </div> <!--extrainfo-->
+            <div class="socialinfo">
+                <li>
+                    <label for="facebook">Facebook</label>
+                    <input type="text" id="facebook" name="use_facebook" value="@@use_facebook@@" title="Facebook Username">
+                </li>
+                <li>
+                    <label for="instagram">Instagram</label>
+                    <input type="text" id="instagram" name="use_instagram" value="@@use_instagram@@" title="Instagram Username">
+                </li>
+            </div> <!--extrainfo-->
+            <li>
+                <input class="button cancel" type="button" onclick="window.location.href = 'profile.php';" value="Cancel">
+                <input class="button submit" type="submit" value="Spread">
+            </li>
+        </ul>
+
+    </form>
+
+</main>
