@@ -15,7 +15,7 @@ if ( $formname == "loginform" AND $buttonvalue == "Log in" )
     else
     {
         $_SESSION["msg"][] = "Sorry! Verkeerde login of wachtwoord!";
-        header("Location: /oef62/login.php");
+        header("Location: /spreadgraphic/login.php");
     }
 }
 else
