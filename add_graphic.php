@@ -2,8 +2,6 @@
 require_once "lib/autoload.php";
 BasicHead();
 ShowMessages();
-
-echo var_dump($_SESSION['use']);
 ?>
 <body class="main">
 <?php PrintNavBar(); ?>

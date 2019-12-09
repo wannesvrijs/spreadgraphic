@@ -38,6 +38,7 @@ if ( $_POST["submitbutton"] == "Spread!" )
 //                    " gra_material='" . implode(' ',$_POST['material']) . "' , " .
                     " gra_uploaddate = NOW()";
 
+
                 if (ExecuteSQL($sql)) {
                     $_SESSION["msg"][] = "uw werk werd toegevoed!";
 

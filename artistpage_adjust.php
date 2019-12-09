@@ -6,7 +6,9 @@ BasicHead();
 <body>
 <?php
 PrintNavBar(); //NAVIGATIE
-print LoadTemplate("artistpage_adjust"); //TEMPLATE
+$data = GetData("select * from users where use_id=" .$_SESSION['use']['use_id'] );
+$template = LoadTemplate("artistpage_adjust"); //TEMPLATE
+print ReplaceContent( $data, $template);
 ?>
 </body>
 </html>
