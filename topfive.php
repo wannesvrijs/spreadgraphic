@@ -13,8 +13,7 @@ BasicHead();
 
             <?php
             $data = GetData("select * from images");
-            $template = LoadTemplate("topfive");
-            print ReplaceContent( $data, $template);
+            print LoadTemplate("topfive");
             ?>
 
         </div>
