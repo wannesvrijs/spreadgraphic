@@ -29,15 +29,15 @@ if ( $_POST["submitbutton"] == "Spread!" )
 //              verplaats file naar folder uploads
                 move_uploaded_file($fileTmpName, $fileDestination);
 
-//              denk er goed aan dat de tags nog moeten worden toegevoegd
-
-//                insert alle ingegeven data (inclusief gra_img - naam) in dat databank;
+//              insert alle ingegeven data (inclusief gra_img - naam) in dat databank;
                 $sql = "INSERT INTO $tablename SET " .
                     " gra_use_id='" . $_SESSION['use']['use_id'] . "' , " .
                     " gra_image='" . $fileNameNew . "' , " .
                     " gra_description='" . htmlentities($_POST['gra_description'], ENT_QUOTES) . "' , " .
                     " gra_tags='" . htmlentities($_POST['gra_tags'], ENT_QUOTES) . "' , " .
+//                    " gra_material='" . implode(' ',$_POST['material']) . "' , " .
                     " gra_uploaddate = NOW()";
+
 
                 if (ExecuteSQL($sql)) {
                     $_SESSION["msg"][] = "uw werk werd toegevoed!";

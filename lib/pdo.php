@@ -32,5 +32,8 @@ function ExecuteSQL( $sql )
 
     if ( $stm->execute() ) return true;
     else return false;
+
 }
+
+
 
