@@ -35,14 +35,19 @@
 
 /* footer */
 
-footer {
+footer ul {
     display: flex;
+    font-family: 'Merriweather', serif;
+}
+
+footer ul li {
+    list-style: none;
+    color: black;
 }
 
 footer ul li a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Merriweather', serif;
+    display: inline-block;
+    padding: 1em;
 }
 
 
