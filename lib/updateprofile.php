@@ -4,9 +4,11 @@ require_once "autoload.php";
 $formname = $_POST["formname"];
 $tablename = $_POST["tablename"];
 
-if ( $_POST["submitbutton"] == "Spread!" )
+if ( $_POST["submitbutton2"] == "Spread!" )
 {
     $file = $_FILES['use_picture'];
+
+    var_dump($file);
 
     $fileName = $file['name'];
     $fileTmpName = $file['tmp_name'];
@@ -31,7 +33,6 @@ if ( $_POST["submitbutton"] == "Spread!" )
 //              insert alle ingegeven data (inclusief gra_img - naam) in dat databank;
 
                 $sql = "UPDATE $tablename SET " .
-                    " use_id='" . $_SESSION['use']['use_id'] . "' , " .
                     " use_name='" . htmlentities($_POST['use_name'], ENT_QUOTES) . "' , " .
                     " use_firstname='" . htmlentities($_POST['use_firstname'], ENT_QUOTES) . "' , " .
                     " use_email='" . $_POST['use_email'] . "' , " .
@@ -40,7 +41,8 @@ if ( $_POST["submitbutton"] == "Spread!" )
                     " use_instagram='" . $_POST['use_instagram'] . "' , " .
                     " use_caption='" . htmlentities($_POST['use_caption'], ENT_QUOTES) . "' , " .
                     " use_about='" . htmlentities($_POST['use_about'], ENT_QUOTES) . "' , " .
-                    " use_education='" . htmlentities($_POST['use_education'], ENT_QUOTES) . "'";
+                    " use_education='" . htmlentities($_POST['use_education'], ENT_QUOTES) . "' 
+                    WHERE use_id = " . $_SESSION['use']['use_id'];
 
                 echo $sql;
 

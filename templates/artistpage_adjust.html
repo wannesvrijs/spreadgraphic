@@ -1,7 +1,7 @@
 <main class="container">
     <h1>Profile Settings</h1>
 
-    <form class="col-grid-12 profileform" action="lib/updateprofile.php" method="post">
+    <form class="col-grid-12 profileform" action="lib/updateprofile.php" method="post" enctype="multipart/form-data">
 
         <input type="hidden" id="formname" name="formname" value="profileform">
         <input type="hidden" id="tablename" name="tablename" value="users">
@@ -55,7 +55,7 @@
             </div> <!--extrainfo-->
             <li>
                 <input class="button cancel" type="button" onclick="window.location.href = 'artistpage.php';" value="Cancel">
-                <input class="button submit" name="submitbutton" type="submit" value="Spread!">
+                <input class="button submit" name="submitbutton2" type="submit" value="Spread!">
             </li>
         </ul>
 
