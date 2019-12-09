@@ -9,7 +9,7 @@ require_once "show_messages.php";
 
 //redirect naar NO ACCESS pagina als de gebruiker niet ingelogd is en niet naar
 //de loginpagina gaat
-//if ( ! isset($_SESSION['use']) AND ! $login_form AND ! $register_form AND ! $no_access)
-//{
-//    header("Location: /oef62/no_access.php");
-//}
+if ( ! isset($_SESSION['use']) AND ! $login_form AND ! $register_form AND ! $no_access)
+{
+    header("Location: /oef62/no_access.php");
+}
