@@ -11,5 +11,5 @@ require_once "show_messages.php";
 //de loginpagina gaat
 if ( ! isset($_SESSION['use']) AND ! $login_form AND ! $register_form AND ! $no_access)
 {
-    header("Location: /no_access.php");
+    header("Location: /spreadgraphic/no_access.php");
 }

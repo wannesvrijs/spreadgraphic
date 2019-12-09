@@ -34,7 +34,7 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Register"
 
         if ( ControleLoginWachtwoord( $_POST["use_email"] , $_POST["use_paswd"]) )
         {
-            header("Location: /oef62/steden.php");
+            header("Location: /spreadgraphic/index.php");
         }
     }
     else
