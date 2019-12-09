@@ -4,14 +4,13 @@
     <form class="col-grid-12 profileform" action="lib/updateprofile.php" method="post">
 
         <input type="hidden" id="formname" name="formname" value="profileform">
-        <input type="hidden" id="tablename" name="tablename" value="user">
-        <input type="hidden" id="pkey" name="pkey" value="usr_id">
+        <input type="hidden" id="tablename" name="tablename" value="users">
 
         <figure class="img-container">
-            <img src="images/profiel.png" alt="profilepicture">
+            <img src="profile_img/@@use_picture@@" alt="profilepicture">
             <figcaption>
                 <label for="profielfoto">Upload new image</label>
-                <input id="profielfoto" type="file" name="use_img" value="@@use_img@@">
+                <input id="profielfoto" type="file" name="use_picture" value="@@use_picture@@">
             </figcaption>
         </figure>
 
@@ -55,8 +54,8 @@
                 </li>
             </div> <!--extrainfo-->
             <li>
-                <input class="button cancel" type="button" onclick="window.location.href = 'profile.php';" value="Cancel">
-                <input class="button submit" type="submit" value="Spread">
+                <input class="button cancel" type="button" onclick="window.location.href = 'artistpage.php';" value="Cancel">
+                <input class="button submit" name="submitbutton" type="submit" value="Spread!">
             </li>
         </ul>
 

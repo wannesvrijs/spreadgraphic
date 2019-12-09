@@ -8,7 +8,7 @@ BasicHead();
 PrintNavBar(); //NAVIGATIE
 $data = GetData("select * from users where use_id=" .$_SESSION['use']['use_id'] );
 $template = LoadTemplate("artistpage_adjust"); //TEMPLATE
-print ReplaceContent( $data, $template);
+echo ReplaceContent( $data, $template);
 ?>
 </body>
 </html>
