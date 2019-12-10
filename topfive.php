@@ -2,11 +2,10 @@
 require_once "lib/autoload.php";
 BasicHead();
 ?>
-
     <body>
     <?php PrintNavBar(); ?>
     <!-- pagina titel -->
-        <div class="container topfive">
+        <div class="container" id="page_topfive">
             <h1>These are our top five graphics this week. Get inspired…</h1>
 
             <?php
@@ -14,6 +13,6 @@ BasicHead();
             print LoadTemplate("topfive");
             ?>
         </div>
-        <?php PrintFooter(); ?>
+    <? PrintFooter(); ?>
     </body>
 </html>

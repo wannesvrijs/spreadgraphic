@@ -6,9 +6,8 @@
     <body>
         <?php PrintNavBar(); ?>
 
-        <!-- zoekbalk -->
-        <div class="container">
-            <div class="row zoekbalk">
+        <div class="container" id="page_index">
+            <div class="zoekbalk">
                  <input type="text" placeholder="#">
             </div>
             <?php
@@ -17,6 +16,7 @@
                 print ReplaceContent( $data, $template);
              ?>
         </div>
+
         <?php PrintFooter(); ?>
     </body>
 </html>
