@@ -1,3 +1,9 @@
+/* footer */
+#page_index .container {
+    margin-bottom: 0; /* footer fixen */
+    padding-bottom: 150px;
+}
+
 /* zoekbalk */
 #page_index .zoekbalk {
     display: flex;
@@ -25,54 +31,57 @@
 }
 
 /* feed masonry */
-section{
+#page_index section{
     column-width: 300px;
     column-gap: 1em;
     padding: 1em;
     margin-bottom: 200px;
 }
 
-section img{
+#page_index section img{
     width: 100%;
     margin-bottom: 1em;
 }
 
 
-/* footer */
-#page_index .container {
-    margin-bottom: 0; /* footer fixen */
-    padding-bottom: 150px;
-}
-
 /* image overlay */
 
-.image_overlay_box {
+#page_index .image_overlay_box {
     position: relative;
 }
 
-.image_graphic {
+#page_index .image_graphic {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.overlay {
+#page_index .overlay {
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.7); /* Black see-through */
-    color: #f1f1f1;
     width: 100%;
     transition: .5s ease;
     opacity:0;
     color: white;
     font-size: 20px;
     padding: 20px;
-    text-align: center;
     height: 100%;
 }
 
-.image_overlay_box:hover .overlay {
+#page_index .image_overlay_box:hover .overlay {
     opacity: 1;
+}
+
+
+#page_index .artist_image_overlay img {
+    width: 60px;
+    height: 60px;
+}
+
+#page_index .artist_image_overlay p {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 2em;
 }
 
 
