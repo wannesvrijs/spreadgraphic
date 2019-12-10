@@ -4,11 +4,15 @@ BasicHead();
 ?>
 
 <body>
-<?php
-PrintNavBar(); //NAVIGATIE
-print LoadTemplate("helpdesk"); //TEMPLATE
-?>
-<?php PrintFooter(); ?>
+<div class="container">
+    <?php
+    PrintNavBar(); //NAVIGATIE
+    print LoadTemplate("helpdesk"); //TEMPLATE
+    ?>
+    <?php PrintFooter(); ?>
+
+</div>
+
 
 </body>
 </html>

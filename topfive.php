@@ -6,17 +6,14 @@ BasicHead();
     <body>
     <?php PrintNavBar(); ?>
     <!-- pagina titel -->
-        <div class="container">
-            <div class="topfive">
-                <h1>These are our top five graphics this week. Get inspired…</h1>
-            </div>
+        <div class="container topfive">
+            <h1>These are our top five graphics this week. Get inspired…</h1>
 
             <?php
             $data = GetData("select * from images");
             print LoadTemplate("topfive");
             ?>
-
         </div>
-    <?php PrintFooter(); ?>
+        <?php PrintFooter(); ?>
     </body>
 </html>

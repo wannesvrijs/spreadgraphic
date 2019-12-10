@@ -11,14 +11,15 @@ ShowMessages();
 <body class="main loginbody">
 <?php PrintNavBar(); ?>
 
-<main class="container">
+<div class="container">
     <h1>Welcome back!</h1>
 
     <?php
     print LoadTemplate("login");
     ?>
-
-</main>
+</div>
 <?php PrintFooter(); ?>
+
+
 </body>
 </html>

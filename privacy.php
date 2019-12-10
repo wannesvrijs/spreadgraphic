@@ -4,10 +4,14 @@ BasicHead();
 ?>
 
 <body>
-<?php
-PrintNavBar(); //NAVIGATIE
-print LoadTemplate("privacy"); //TEMPLATE
-?>
-<?php PrintFooter(); ?>
+<div class="container">
+    <?php
+    PrintNavBar(); //NAVIGATIE
+    print LoadTemplate("privacy"); //TEMPLATE
+    ?>
+    <?php PrintFooter(); ?>
+
+</div>
+
 </body>
 </html>

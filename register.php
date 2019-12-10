@@ -7,14 +7,14 @@ BasicHead();
 <body class="main">
 <?php PrintNavBar(); ?>
 
-<main class="container">
+<div class="container">
     <h1>New account</h1>
 
     <?php
     print LoadTemplate("register");
     ?>
+    <?php PrintFooter(); ?>
 
-</main>
-<?php PrintFooter(); ?>
+</div>
 </body>
 </html>

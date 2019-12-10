@@ -1,3 +1,6 @@
+
+
+
 /* zoekbalk */
 
 .zoekbalk {
@@ -31,9 +34,18 @@
 .container {
     width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 /* footer */
+
+footer {
+    position: absolute;
+    margin-top: 100px;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+}
 
 footer ul {
     display: flex;

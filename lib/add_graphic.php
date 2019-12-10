@@ -1,6 +1,7 @@
 <?php
 require_once "autoload.php";
 
+//commentaar van steven
 $formname = $_POST["formname"];
 $tablename = $_POST["tablename"];
 $pkey = $_POST["pkey"];

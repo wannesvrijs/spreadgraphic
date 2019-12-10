@@ -12,11 +12,11 @@
 -------------------------------------------------------------- */
 .topfive section.grid {
     display: grid;
-    grid-template-rows: 400px 130px;
+    grid-template-rows: 500px 90px;
     grid-template-columns: 2fr 4fr 1fr 4fr 1fr;
-    grid-gap: 10px;
     margin: 80px auto 0 auto;
 }
+
 
 /* ELEMENT 1: nummer */
 .topfive .grid div:nth-of-type(1) {
@@ -25,14 +25,20 @@
     font-family: 'Merriweather', serif;
     font-size: 4rem;
     color: #1D1D1D;
-    padding-left: 65%;
 }
 
 /* ELEMENT 2: afbeelding  */
 .topfive .grid  div:nth-of-type(2) {
+    grid-row-start: 1;
+    grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 2;
-    width: 100% ;
+}
+
+.topfive .grid  div:nth-of-type(2) img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* ELEMENT 3: leeg item tussen beschrijving en afbeelding */
@@ -62,13 +68,6 @@
     font-weight: 600;
 }
 
-.topfive .graphicdetail img {
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    overflow: hidden
-}
-
 /* ELEMENT 5: artist detail */
 .topfive .grid div:nth-of-type(5){
     grid-column-start: 4;
@@ -79,24 +78,28 @@
 
 .topfive .grid .artisttext {
     display: flex;
+    justify-content: flex-start;
 }
 
-.topfive .grid .artisttext img {
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-    border-radius: 50%;
+.topfive .grid .artisttext .rondeimage {
+    padding-bottom: 0;
+}
+
+.topfive .grid .artisttext .rondeimage img {
+    width: 90px;
+    height: 90px;
 }
 
 .topfive .grid .artisttext p {
-    margin-left: 1.5em;
-    margin-top: 20px;
+    margin: auto 0;
     font-family: 'Source Sans Pro', sans-serif;
+    margin-left: -280px;
 }
 
 .topfive .grid .artisttext p span {
     font-size: 1.3rem;
 }
+
 
 
 
