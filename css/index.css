@@ -38,9 +38,11 @@
     margin-bottom: 200px;
 }
 
-#page_index section img{
+#page_index section img.image_graphic{
     width: 100%;
     margin-bottom: 1em;
+    display: block;
+    height: auto;
 }
 
 
@@ -48,12 +50,6 @@
 
 #page_index .image_overlay_box {
     position: relative;
-}
-
-#page_index .image_graphic {
-    display: block;
-    width: 100%;
-    height: auto;
 }
 
 #page_index .overlay {
@@ -73,7 +69,6 @@
     opacity: 1;
 }
 
-
 #page_index .artist_image_overlay img {
     width: 60px;
     height: 60px;
@@ -81,9 +76,12 @@
 
 #page_index .artist_image_overlay p {
     font-family: 'Source Sans Pro', sans-serif;
-    padding-left: 2em;
+    background-color: red;
 }
 
+#page_index .overlay_hover_box .hartje {
+    width: 10px;
+}
 
 
 
