@@ -8,18 +8,16 @@ if ( isset($_SESSION['use']) ) { $_SESSION["msg"][] = "U bent al ingelogd!"; hea
 BasicHead();
 ShowMessages();
 ?>
-<body class="main loginbody">
-<?php PrintNavBar(); ?>
+    <body class="main loginbody" id="page_login">
+    <?php PrintNavBar(); ?>
 
-<div class="container">
-    <h1>Welcome back!</h1>
+        <div class="container">
+            <h1>Welcome back!</h1>
 
-    <?php
-    print LoadTemplate("login");
-    ?>
-</div>
-<?php PrintFooter(); ?>
-
-
-</body>
+            <?php
+            print LoadTemplate("login");
+            ?>
+        </div>
+    <?php PrintFooter(); ?>
+    </body>
 </html>

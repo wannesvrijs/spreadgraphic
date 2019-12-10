@@ -1,0 +1,17 @@
+#page_login form p {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 1em;
+    font-size: 0.9rem;
+}
+
+#page_login form input.button {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#page_login footer ul li a{
+    color: white;
+}
+
+#page_login nav ul li a {
+    color: white;
+}

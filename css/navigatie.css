@@ -1,18 +1,20 @@
 
 .headerbalk {
-    height: 100px;
+    height: 45px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin: 40px 0;
 }
 
 /* logo */
 .navbarlogo img {
-    width: 200px;
-    margin: 2.4em 2em;
+    width: 250px;
+    margin-left: 2em;
 }
 
 /* navigatie  */
+
 
 nav ul {
     display: flex;
@@ -21,21 +23,30 @@ nav ul {
 nav li {
     list-style: none;
     padding: 0 2em; /* padding bij li voor hover border */
+    display: inline-block;
 }
 
-nav a {
+
+nav a.hover_line {
+    display: inline-block;
     color: #1D1D1D;
     text-decoration: none;
     font-family: 'Merriweather', serif;
-    line-height: 100px;
+    line-height: 40px;
     font-size: 1rem;
 }
 
-nav a:hover {
-    padding: 0 0 2px 0; /* padding voor oranje onderlijning */
-    border-bottom: 3px solid #FF5100;
-    color: #1D1D1D;
-    text-decoration: none;
+nav a.hover_line::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: #FF5100;
+    transition: width .3s;
+}
+
+nav a.hover_line:hover::after {
+    width: 100%;
 }
 
 
