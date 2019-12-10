@@ -8,5 +8,6 @@ BasicHead();
 PrintNavBar(); //NAVIGATIE
 print LoadTemplate("privacy"); //TEMPLATE
 ?>
+<?php PrintFooter(); ?>
 </body>
 </html>

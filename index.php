@@ -17,11 +17,6 @@
                 print ReplaceContent( $data, $template);
              ?>
         </div>
-    <footer>
-        <ul>
-            <li><a>helpdesk</a></li>
-            <li><a>privacy</a></li>
-        </ul>
-    </footer>
+        <?php PrintFooter(); ?>
     </body>
 </html>

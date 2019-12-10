@@ -7,6 +7,12 @@ function BasicHead()
     $_SESSION["head_printed"] = true;
 }
 
+/* Deze functie laadt de footer */
+function PrintFooter()
+{
+    print LoadTemplate("footer");
+}
+
 function PrintNavBar()
 {
     //navbar items ophalen

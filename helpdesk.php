@@ -8,5 +8,7 @@ BasicHead();
 PrintNavBar(); //NAVIGATIE
 print LoadTemplate("helpdesk"); //TEMPLATE
 ?>
+<?php PrintFooter(); ?>
+
 </body>
 </html>

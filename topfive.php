@@ -17,5 +17,6 @@ BasicHead();
             ?>
 
         </div>
+    <?php PrintFooter(); ?>
     </body>
 </html>

@@ -8,5 +8,7 @@ BasicHead();
 PrintNavBar(); //NAVIGATIE
 print LoadTemplate("artistpage"); //TEMPLATE
 ?>
+<?php PrintFooter(); ?>
+
 </body>
 </html>

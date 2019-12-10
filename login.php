@@ -19,7 +19,6 @@ ShowMessages();
     ?>
 
 </main>
-<footer></footer>
-
+<?php PrintFooter(); ?>
 </body>
 </html>
