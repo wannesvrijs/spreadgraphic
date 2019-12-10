@@ -5,7 +5,7 @@ BasicHead();
     <body>
     <?php PrintNavBar(); ?>
     <!-- pagina titel -->
-        <div class="container" id="page_topfive">
+        <div class="container" id="topfive">
             <h1>These are our top five graphics this week. Get inspired…</h1>
 
             <?php
@@ -13,6 +13,5 @@ BasicHead();
             print LoadTemplate("topfive");
             ?>
         </div>
-    <? PrintFooter(); ?>
     </body>
 </html>

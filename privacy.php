@@ -2,16 +2,11 @@
 require_once "lib/autoload.php";
 BasicHead();
 ?>
-
-<body>
-<div class="container">
-    <?php
-    PrintNavBar(); //NAVIGATIE
-    print LoadTemplate("privacy"); //TEMPLATE
-    ?>
-    <?php PrintFooter(); ?>
-
-</div>
-
-</body>
+    <body>
+    <?php PrintNavBar(); ?>
+        <div class="container" id="privacy">
+        <?php print LoadTemplate("privacy"); ?>
+        </div>
+        <?php PrintFooter(); ?>
+    </body>
 </html>

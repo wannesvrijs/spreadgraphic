@@ -28,14 +28,14 @@
 }
 
 /* ELEMENT 2: afbeelding  */
-#page_topfive .grid  div:nth-of-type(2) {
+#page_topfive .grid div:nth-of-type(2) {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 2;
 }
 
-#page_topfive.grid  div:nth-of-type(2) img{
+#page_topfive .grid div:nth-of-type(2) img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -55,7 +55,7 @@
     line-height: 1.3;
 }
 
-#page_topfive.grid .graphicdetail p{
+#page_topfive .grid .graphicdetail p{
     margin-bottom: 20px;
 }
 
@@ -85,19 +85,28 @@
     padding-bottom: 0;
 }
 
-#page_topfive.grid .artisttext .rondeimage img {
+#page_topfive .grid .artisttext .rondeimage img {
     width: 90px;
     height: 90px;
 }
 
 #page_topfive .grid .artisttext p {
-    margin: auto 0;
     font-family: 'Source Sans Pro', sans-serif;
-    margin-left: -280px;
+    margin-left: 110px;
+    align-items: center;
 }
 
-#page_topfive .grid .artisttext p span {
-    font-size: 1.3rem;
+#page_topfive .grid .artisttext ul {
+    margin-left: 80px;
+}
+
+#page_topfive .grid .artisttext ul li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    list-style: none;
+}
+#page_topfive .grid .artisttext ul li:first-child {
+    font-size: 1.4em;
 }
 
 
