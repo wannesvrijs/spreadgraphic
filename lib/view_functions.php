@@ -1,5 +1,6 @@
 <?php
-/* Deze functie laadt de <head> sectie */
+/* <HEAD> OPHALEN
+------------------------------------------------------------------------*/
 function BasicHead()
 {
     print LoadTemplate("basic_head");
@@ -7,12 +8,15 @@ function BasicHead()
     $_SESSION["head_printed"] = true;
 }
 
-/* Deze functie laadt de footer */
+/* FOOTER PRINTEN
+------------------------------------------------------------------------*/
 function PrintFooter()
 {
     print LoadTemplate("footer");
 }
 
+/* NAVIGATIEBAR PRINTEN
+------------------------------------------------------------------------*/
 function PrintNavBar()
 {
     //navbar items ophalen
@@ -44,7 +48,8 @@ function PrintNavBar()
     print ReplaceContentOneRow($data, $template_navbar);
 }
 
-/* Deze functie laadt de opgegeven template */
+/* TEMPLATE OPHALEN
+------------------------------------------------------------------------*/
 function LoadTemplate( $name )
 {
     if ( file_exists("$name.html") ) return file_get_contents("$name.html");
@@ -52,7 +57,9 @@ function LoadTemplate( $name )
     if ( file_exists("../templates/$name.html") ) return file_get_contents("../templates/$name.html");
 }
 
-/* Deze functie voegt data en template samen en print het resultaat */
+
+/* DATA VAN DATABASE + TEMPLATE PRINTEN --> $data
+------------------------------------------------------------------------*/
 function ReplaceContent( $data, $template_html )
 {
     $returnval = "";
@@ -72,7 +79,8 @@ function ReplaceContent( $data, $template_html )
     return $returnval;
 }
 
-/* Deze functie voegt data en template samen en print het resultaat */
+/* DATA VAN DATABASE + TEMPLATE PRINTEN --> $row
+------------------------------------------------------------------------*/
 function ReplaceContentOneRow( $row, $template_html )
 {
         //replace fields with values in template

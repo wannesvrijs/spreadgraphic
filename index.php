@@ -10,12 +10,16 @@
                 <div class="zoekbalk">
                     <input type="text" placeholder="#">
                 </div>
-
+            <section>
                 <?php
-                $data = GetData("select * from images");
-                $template = LoadTemplate("index");
-                print ReplaceContent( $data, $template);
+                //$data = GetData("select * from graphic");
+                print LoadTemplate("index");
+                //print ReplaceContent( $data, $template);
                 ?>
+
+            </section>
+
+
 
         </div>
     <?php PrintFooter(); ?>
