@@ -3,6 +3,7 @@
 .zoekbalk {
     display: flex;
     justify-content: center;
+    background-color: #e83e8c;
 }
 
 .zoekbalk input {
