@@ -7,11 +7,11 @@
         <input type="hidden" id="tablename" name="tablename" value="users">
 
         <figure class="img-container">
-            <img src="profile_img/@@use_picture@@" alt="profilepicture">
             <figcaption>
                 <label for="profielfoto">Upload new image</label>
                 <input id="profielfoto" type="file" name="use_picture" value="@@use_picture@@" onchange="preview_image(event)">
             </figcaption>
+            <img id="profilepic" src="profile_img/@@use_picture@@" alt="profilepicture"/>
         </figure>
 
         <ul>
