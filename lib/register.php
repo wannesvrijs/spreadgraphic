@@ -26,6 +26,7 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Register"
                 " use_firstname='" . htmlentities($_POST['use_firstname'], ENT_QUOTES) . "' , " .
                 " use_name='" . htmlentities($_POST['use_name'], ENT_QUOTES) . "' , " .
                 " use_email='" . $_POST['use_email'] . "' , " .
+                " use_picture='default.svg' , " .
                 " use_paswd='" . $password_encrypted . "'  " ;
 
     if ( ExecuteSQL($sql) )

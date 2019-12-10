@@ -14,19 +14,17 @@ function PrintNavBar()
 
     $laatstedeelurl = basename($_SERVER['SCRIPT_NAME']);
 
-    //aan de juiste datarij, de sleutels 'active' en 'sr-only' toevoegen
+    //aan de juiste datarij, de sleutel 'active' toevoegen
     foreach( $data as $r => $row )
     {
         //if ( $r == 0 )
         if ($laatstedeelurl == $data[$r]['men_destination'])
         {
             $data[$r]['active'] = 'active';
-            $data[$r]['sr_only'] = '<span class="sr-only">(current)</span>';
         }
         else
         {
             $data[$r]['active'] = '';
-            $data[$r]['sr_only'] = '';
         }
     }
 
