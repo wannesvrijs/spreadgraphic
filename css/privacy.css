@@ -1,4 +1,3 @@
-html { scroll-behavior: smooth; }
 
 
 /* grid systeem */
@@ -11,7 +10,6 @@ html { scroll-behavior: smooth; }
 }
 
 #page_privacy .grid_privacy h2 {
-    font-family: 'Merriweather', serif;
     padding: 1em 0;
     font-size: 1.4rem;
     color: #FF5100;

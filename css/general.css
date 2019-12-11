@@ -1,0 +1,55 @@
+/* hier alle algemene stijlen */
+
+/* fonts */
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Merriweather:700&display=swap';
+
+/* elementen */
+html {
+    scroll-behavior: smooth; /* voor privacy page */
+    height: 100%; /* voor footer */
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative; /* voor footer */
+    margin: 0;
+    min-height: 100%; /* voor footer*/
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 8rem ;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+}
+
+a {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: underline;
+    color: #FF5100;
+    font-size: 1rem;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+}
+
+/* forms */
+
+input {
+    outline: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+

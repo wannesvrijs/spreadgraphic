@@ -4,7 +4,6 @@
 
 
 #page_topfive h1 {
-    font-family: 'Merriweather', serif;
     font-size: 1.5rem;
     width: 270px;
     text-align: center;
@@ -95,7 +94,6 @@
 }
 
 #page_topfive .grid .artisttext p {
-    font-family: 'Source Sans Pro', sans-serif;
     margin-left: 110px;
     align-items: center;
 }
