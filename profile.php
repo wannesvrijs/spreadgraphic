@@ -4,11 +4,16 @@ BasicHead();
 ShowMessages();
 ?>
 
-<body>
-<?php
-PrintNavBar(); //NAVIGATIE
-print LoadTemplate("artistpage"); //TEMPLATE
-?>
+<body id="page_artistpage">
+<?php PrintNavBar(); ?>
+
+<div class="container">
+
+    <?php
+    print LoadTemplate("profile");
+    ?>
+
+</div>
 <?php PrintFooter(); ?>
 
 </body>
