@@ -31,14 +31,16 @@
 }
 
 /* feed masonry */
-#page_index section{
+#page_index section,
+#page_profile section {
     column-width: 300px;
     column-gap: 1em;
     padding: 1em;
     margin-bottom: 200px;
 }
 
-#page_index section img.image_graphic{
+#page_index section img.image_graphic,
+#page_profile section img.image_graphic {
     width: 100%;
     margin-bottom: 1em;
     display: block;

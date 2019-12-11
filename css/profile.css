@@ -1,9 +1,9 @@
 
 /* GRID
 -------------------------------------------------------------- */
-#page_artistpage section.grid_artistpage {
+#page_profile .grid_artistpage {
     display: grid;
-    grid-template-rows: 220px 45px 20px 20px;
+    grid-template-rows: 220px 45px 20px 40px;
     grid-template-columns: 4fr 1fr 2fr 1fr 4fr;
     row-gap: 1em;
     text-align: center;
@@ -11,7 +11,7 @@
 }
 
 /* ELEMENT 1: profile picture */
-#page_artistpage .grid_artistpage div:nth-of-type(1) {
+#page_profile .grid_artistpage div:nth-of-type(1) {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 3;
@@ -19,21 +19,21 @@
 }
 
 /* ELEMENT 2: name and caption */
-#page_artistpage .grid_artistpage div:nth-of-type(2) {
+#page_profile .grid_artistpage div:nth-of-type(2) {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 5;
 }
 
-#page_artistpage .grid_artistpage div p.name {
+#page_profile .grid_artistpage div p.name {
     font-size: 1.4rem;
     margin-bottom: 0.2em;
     font-family: 'Merriweather', serif;
 }
 
 /* ELEMENT 3: read more */
-#page_artistpage .grid_artistpage div:nth-of-type(3) {
+#page_profile .grid_artistpage div:nth-of-type(3) {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 3;
@@ -44,20 +44,20 @@
 }
 
 /* ELEMENT 4: social */
-#page_artistpage .grid_artistpage div:nth-of-type(4) {
+#page_profile .grid_artistpage div:nth-of-type(4) {
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 3;
     grid-column-end: 4;
 }
 
-#page_artistpage .grid_artistpage div:nth-of-type(4) a{
+#page_profile .grid_artistpage div:nth-of-type(4) a{
     color: black;
     margin: 5px;
     font-size: 1.4rem;
 }
 
-#page_artistpage .grid_artistpage div:nth-of-type(4) a:hover {
+#page_profile .grid_artistpage div:nth-of-type(4) a:hover {
     color: #FF5100;
 }
 
