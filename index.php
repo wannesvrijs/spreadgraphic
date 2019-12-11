@@ -4,26 +4,23 @@ BasicHead();
 ShowMessages();
 ?>
 
-    <body id="page_index">
-        <?php PrintNavBar(); ?>
+<body id="page_index">
+<?php PrintNavBar(); ?>
 
-        <div class="container">
-                <div class="zoekbalk">
-                    <input type="text" placeholder="#">
-                </div>
-            <section>
-                <?php
-                //$data = GetData("select * from graphic");
-                print LoadTemplate("index");
-                //print ReplaceContent( $data, $template);
-                ?>
+<div class="container">
+    <div class="zoekbalk">
+        <input type="text" placeholder="#">
+    </div>
+    <section>
+        <?php
+        $data = GetData("select * from graphic");
+        LoadTemplate("index");
+        print ReplaceContent( $data, $template);
+        ?>
+    </section>
 
-            </section>
+</div>
 
-
-
-        </div>
-    <?php PrintFooter(); ?>
-
-    </body>
+<?php PrintFooter(); ?>
+</body>
 </html>

@@ -2,23 +2,14 @@
 
 .breadcrumb {
     background: #FF6117;
-    font: 400 100%/1.4 "Source Sans Pro", Arial, sans-serif;
+    font: 400 100%/1.4 "Source Sans Pro", sans-serif;
     color: white;
     padding: .5em 2em;
 }
 
 /*main styling----------------------------- */
 main {
-    font: 400 100%/1.4 "Source Sans Pro", Arial, sans-serif;
-}
-
-
-h1 {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    font-size: 3rem ;
-    text-align: center;
-    margin-bottom: 50px;
+    font: 400 100%/1.4 "Source Sans Pro", sans-serif;
 }
 
 a:hover {

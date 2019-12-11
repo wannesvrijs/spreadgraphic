@@ -1,8 +1,5 @@
 
-
-
 /* footer */
-
 footer {
     position: absolute;
     right: 0;
@@ -13,7 +10,6 @@ footer {
 
 footer ul {
     display: flex;
-    font-family: 'Merriweather', serif;
 }
 
 footer ul li {
@@ -25,5 +21,6 @@ footer ul li a {
     display: inline-block;
     color: black;
     font-weight: 400;
-
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
 }

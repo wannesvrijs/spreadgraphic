@@ -29,17 +29,14 @@ ShowMessages();
                         </div>
                         <div class="popup_text">
                             <div class="education">
-                            <h3>Education</h3>
-                            <p>Texas Art Institute</p>
+                                <h3>Education</h3>
+                                <p>Texas Art Institute</p>
+                            </div>
+                            <div class="about">
+                                <h3>About</h3>
+                                <p>I’m feeling so cool Top to the bottom, just cool Every little thing that I do Dammit, I’m feelin’ so cool, yeah Woke up feelin’ like a new James Dean I comb my hair like an old-school Sheen I’m feelin’ high like a late night summer of last year, yeah Standin’ there with the red dress on you A Killer Queen like a young Jane Fonda Is it me, or am I just havin’ a good year?</p>
+                            </div>
                         </div>
-                        <div class="about">
-                            <h3>About</h3>
-                            <p>I’m feeling so cool Top to the bottom, just cool Every little thing that I do Dammit, I’m feelin’ so cool, yeah Woke up feelin’ like a new James Dean I comb my hair like an old-school Sheen I’m feelin’ high like a late night summer of last year, yeah Standin’ there with the red dress on you A Killer Queen like a young Jane Fonda Is it me, or am I just havin’ a good year?</p>
-                        </div>
-
-                        </div>
-
-
                         <a class="close" href="#">&times;</a>
                     </div>
                 </div>
