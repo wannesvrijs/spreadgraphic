@@ -43,8 +43,10 @@ function PrintNavBar()
     $navbar_items = ReplaceContent($data, $template_navbar_item);
 
     //navbar template samenvoegen met resultaat ($navbar_items)
-    $data = array( "navbar_items" => $navbar_items ) ;
-    $template_navbar = LoadTemplate("navbar");
+    $data = array( "navbar_items" => $navbar_items );
+    if ($_SERVER["SCRIPT_URL"] == "/wdev_wannes/spreadgraphic/login.php") $template_navbar = LoadTemplate("navbar_login");
+    else $template_navbar = LoadTemplate("navbar");
+
     print ReplaceContentOneRow($data, $template_navbar);
 }
 

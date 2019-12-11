@@ -17,6 +17,7 @@ ShowMessages();
             <?php
             print LoadTemplate("login");
             ?>
+
         </div>
     <?php PrintFooter(); ?>
     </body>

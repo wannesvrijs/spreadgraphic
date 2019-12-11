@@ -39,6 +39,8 @@ if ( $_POST["submitbutton"] == "Spread!" )
 //                    " gra_material='" . implode(' ',$_POST['material']) . "' , " .
                     " gra_uploaddate = NOW()";
 
+                header("location:".$maindirectory."index.php");
+
 
 
                 if (ExecuteSQL($sql)) {

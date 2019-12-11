@@ -8,10 +8,15 @@
 }
 
 /* logo */
-.navbarlogo img {
+.navbarlogo svg {
     width: 250px;
     margin-left: 2em;
 }
+
+.st0{enable-background:new;}
+.st1{fill:#FF5100;}
+.st2{fill:#1D1D1B;}
+.st3{fill:white;}
 
 /* navigatie  */
 
