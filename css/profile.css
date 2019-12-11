@@ -1,3 +1,8 @@
+#page_profile section {
+    padding-bottom: 200px; /* footer fix */
+    margin-bottom: 0; /* footer fix */
+}
+
 
 /* GRID
 -------------------------------------------------------------- */
@@ -164,7 +169,6 @@
     height: 500px;
     margin-bottom: 1em;
     background-color: #FF5100;
-    font-size: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,6 +176,19 @@
 
 #page_profile section div.add_graphic_here span {
     color: white;
+    font-size: 4em;
+}
+
+#page_profile section div.add_graphic_here:hover {
+    background-color: #1D1D1D;
+    text-decoration: none;
+}
+
+#page_profile section a.profile_underline:visited,
+#page_profile section a.profile_underline:link,
+#page_profile .profile_social a.profile_underline:visited,
+#page_profile .profile_social a.profile_underline:link {
+    text-decoration: none;
 }
 
 

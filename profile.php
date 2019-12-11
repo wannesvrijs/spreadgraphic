@@ -42,18 +42,18 @@ ShowMessages();
                 </div>
                 <!-- social media -->
                 <div class="profile_social">
-                    <a href="#" title="">
+                    <a href="#" title="" class="profile_underline">
                         <span class="fab fa-facebook-f"></span>
                         <span class="sr-only">Facebook pagina</span>
                     </a>
-                    <a href="#" title="">
+                    <a href="#" title="" class="profile_underline">
                         <span class="fab fa-instagram"></span>
                         <span class="sr-only">Instagram pagina</span>
                     </a>
                 </div>
             </div>
             <section>
-                <a href="add_graphic.php">
+                <a href="add_graphic.php" class="profile_underline">
                     <div class="add_graphic_here">
                         <span class="fas fa-plus"></span>
                     </div>

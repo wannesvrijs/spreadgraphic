@@ -3,9 +3,8 @@
 footer {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 45px;
     left: 0;
-    background-color: red;
 }
 
 footer ul {
