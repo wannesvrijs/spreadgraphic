@@ -1,7 +1,7 @@
 <?php
 require_once "lib/autoload.php";
-ShowMessages();
 BasicHead();
+ShowMessages();
 ?>
 <body class="main">
 <?php PrintNavBar(); ?>

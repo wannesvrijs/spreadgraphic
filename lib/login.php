@@ -10,12 +10,12 @@ if ( $formname == "loginform" AND $buttonvalue == "let's go" )
     if ( ControleLoginWachtwoord( $_POST['use_email'], $_POST['use_paswd'] ) )
     {
         $_SESSION["msg"][] = "Welkom, " . $_SESSION['use']['use_firstname'] . "!" ;
-        header("Location: /spreadgraphic/index.php");
+        header("Location:".$maindirectory."index.php");
     }
     else
     {
         $_SESSION["msg"][] = "Sorry! Verkeerde login of wachtwoord!";
-        header("Location: /spreadgraphic/login.php");
+        header("Location:".$maindirectory."login.php");
     }
 }
 else

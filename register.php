@@ -1,8 +1,8 @@
 <?php
-    $register_form = true;
-    require_once "lib/autoload.php";
-    ShowMessages();
-    BasicHead();
+$register_form = true;
+require_once "lib/autoload.php";
+BasicHead();
+ShowMessages();
 ?>
 <body class="main">
 <?php PrintNavBar(); ?>
