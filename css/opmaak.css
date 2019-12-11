@@ -1,8 +1,4 @@
 /*css bij ...*/
-@import "reset.css";
-@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap";
-@import "https://fonts.googleapis.com/css?family=Merriweather:700&display=swap";
-
 
 .breadcrumb {
     background: #FF6117;
@@ -14,22 +10,6 @@
 /*main styling----------------------------- */
 main {
     font: 400 100%/1.4 "Source Sans Pro", Arial, sans-serif;
-}
-
-main.container{
-    width: 1200px;
-    margin: 0 auto;
-}
-
-h1 {
-    font: 700 50px 'Merriweather', georgia, serif;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-a {
-    text-decoration: none;
-    color: #FF6117;
 }
 
 a:hover {
