@@ -8,10 +8,10 @@
     <div class="col-grid-12">
 
         <figure class="img-container">
-            <img src="#" alt=" ">
+            <img id="picturepreview" alt=" "/>
             <figcaption>
                 <label for="profielfoto">Upload new image</label>
-                <input id="profielfoto" type="file" name="use_img" value="@@use_img@@">
+                <input id="profielfoto" type="file" name="use_img" value="@@use_img@@" onchange="preview_image(event)">
             </figcaption>
         </figure>
         <ul>
