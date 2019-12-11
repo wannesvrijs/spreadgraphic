@@ -1,11 +1,11 @@
-    <?php
-    require_once "lib/autoload.php";
-    BasicHead();
-    ShowMessages();
-    ?>
+<?php
+require_once "lib/autoload.php";
+BasicHead();
+ShowMessages();
+?>
 
-    <body id="page_profile">
-    <?php PrintNavBar(); ?>
+<body id="page_profile">
+<?php PrintNavBar(); ?>
         <div class="container">
             <div class="grid_artistpage">
                 <!-- profile picture -->
@@ -34,16 +34,19 @@
                 </div>
             </div>
             <section>
-                <div class="add_graphic_here">
-                    <a><span class="fas fa-plus"></span></a>
-                </div>
-                <?php
-                print LoadTemplate("profile");
-                ?>
+                <a href="add_graphic.php">
+                    <div class="add_graphic_here">
+                        <span class="fas fa-plus"></span>
+                    </div>
+                </a>
+
+<?php
+print LoadTemplate("profile");
+?>
             </section>
 
 
         </div>
-    <?php PrintFooter(); ?>
+<?php PrintFooter(); ?>
     </body>
 </html>
