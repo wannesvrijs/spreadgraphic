@@ -23,7 +23,7 @@ function PrintFooter()
 function PrintNavBar()
 {
     if ( ! isset($_SESSION['use'])) $data = GetData("select * from menu where men_id between 1 and 3 order by men_order");
-    else $data = GetData("select * from menu where men_id <> 2 order by men_order");
+    else $data = GetData("select * from menu where men_id <> 3 order by men_order");
 
         $laatstedeelurl = basename($_SERVER['SCRIPT_NAME']);
 
