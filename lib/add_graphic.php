@@ -32,26 +32,26 @@ if ( $_POST["submitbutton"] == "Spread!" )
                 move_uploaded_file($fileTmpName, $fileDestination);
 
 //-------------- insert alle ingegeven data (inclusief gra_img - naam) in dat databank;
-                $sql .= "INSERT INTO $tablename SET " .
+                $insert = "INSERT INTO $tablename SET " .
                     " gra_use_id='" . $_SESSION['use']['use_id'] . "' , " .
                     " gra_image='" . $fileNameNew . "' , " .
                     " gra_description='" . htmlentities($_POST['gra_description'], ENT_QUOTES) . "' , " .
                     " gra_tags='" . htmlentities($_POST['gra_tags'], ENT_QUOTES) . "' , " .
                     " gra_uploaddate = NOW()";
+                $insertid = GetInsertedId($insert);
+
 
 //-------------- insert de aangeduide materialen
                 $materials = $_POST['material'];
-                $sql2 = "";
                 foreach ($materials as $material) {
-                    $sql2 = "INSERT INTO gramat SET " .
-                        " gramat_mat_id='" . $material . "'";
-                    ExecuteSQL($sql2);
+                    $sql .= "INSERT INTO gramat SET " .
+                        " gramat_gra_id='" . $insertid . "' , " .
+                        " gramat_mat_id='" . $material . "';";
                 }
-
-
 
                 if (ExecuteSQL($sql)) {
                     $_SESSION["msg"][] = "uw werk werd toegevoed!";
+
 
                 } else {
                     $_SESSION["msg"][] = "Sorry, er liep iets fout. uw werk werd niet toegevoed";

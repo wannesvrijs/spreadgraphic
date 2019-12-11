@@ -49,12 +49,14 @@ textarea{
     height: 50px;
     background: #E6E6E6;
     font: 100% "Source Sans Pro", Arial, sans-serif;
+    outline: none;
 }
 
 textarea {
     resize: none;
     padding-top: 20px;
     padding-bottom: 20px;
+    outline: none;
 }
 
 textarea.short{height: 100px;}
