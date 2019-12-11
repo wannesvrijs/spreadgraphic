@@ -18,7 +18,8 @@ if ( $_POST["submitbutton"] == "Spread!" )
 
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
-    $fileNameNew = uniqid('',true).".".$fileActualExt;
+    $userid = $_SESSION['use']['use_id'];
+    $fileNameNew = $userid."_".uniqid('',true).".".$fileActualExt;
 
     $allowed = array('jpg','jpeg','png');
 
