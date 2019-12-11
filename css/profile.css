@@ -11,7 +11,7 @@
 }
 
 /* ELEMENT 1: profile picture */
-#page_profile .grid_artistpage div:nth-of-type(1) {
+#page_profile .grid_artistpage .profile_picture {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 3;
@@ -19,7 +19,7 @@
 }
 
 /* ELEMENT 2: name and caption */
-#page_profile .grid_artistpage div:nth-of-type(2) {
+#page_profile .grid_artistpage .profile_name {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
@@ -32,31 +32,134 @@
 }
 
 /* ELEMENT 3: read more */
-#page_profile .grid_artistpage div:nth-of-type(3) {
+#page_profile .grid_artistpage .profile_readmore {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 3;
     grid-column-end: 4;
+}
+
+#page_profile a.readmore {
+    padding: 10px;
     color: #FF5100;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    text-decoration: underline;
 }
 
+#page_profile .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+#page_profile .overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+#page_profile .popup {
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    width: 70%;
+    height:60%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+#page_profile .popup .rondeimage {
+    margin: 0;
+    padding: 0;
+}
+
+#page_profile .popup .rondeimage img{
+    width: 120px;
+    height: 120px;
+    margin: 40px 0 0 40px;
+}
+
+#page_profile .popup .popup_text {
+    text-align: left;
+    margin-left: 350px;
+    margin-top: 130px;
+    width: 450px;
+    line-height: 1.4 !important;
+}
+
+#page_profile .popup .popup_text h3 {
+    font-weight: 600;
+    margin-right: 2em;
+    display: inline-block;
+}
+
+#page_profile .popup .popup_text p {
+    width: 300px;
+}
+
+#page_profile .popup .education {
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: flex-end;
+}
+#page_profile .popup .about {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#page_profile .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+#page_profile .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FF5110
+}
+#page_profile .popup .close:hover {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ELEMENT 4: social */
-#page_profile .grid_artistpage div:nth-of-type(4) {
+#page_profile .grid_artistpage .profile_social {
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 3;
     grid-column-end: 4;
 }
 
-#page_profile .grid_artistpage div:nth-of-type(4) a{
+#page_profile .grid_artistpage .profile_social a{
     color: black;
     margin: 5px;
     font-size: 1.4rem;
 }
 
-#page_profile .grid_artistpage div:nth-of-type(4) a:hover {
+#page_profile .grid_artistpage .profile_social a:hover {
     color: #FF5100;
 }
 

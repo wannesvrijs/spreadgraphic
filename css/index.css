@@ -86,12 +86,10 @@
     width: 65%;
  }
 
-#page_index .overlay_hover_box .hartje {
+#page_index svg.like_off {
     width: 40px;
     margin-left: 90%;
 }
-
-
 
 
 
