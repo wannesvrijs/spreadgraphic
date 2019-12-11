@@ -28,19 +28,25 @@ if ( $_POST["submitbutton"] == "Spread!" )
             if ($fileSize < 500000) {
                 $fileDestination = '../graphics/'. $fileNameNew;
 
-//              verplaats file naar folder uploads
+//-------------- verplaats file naar folder uploads
                 move_uploaded_file($fileTmpName, $fileDestination);
 
-//              insert alle ingegeven data (inclusief gra_img - naam) in dat databank;
-                $sql = "INSERT INTO $tablename SET " .
+//-------------- insert alle ingegeven data (inclusief gra_img - naam) in dat databank;
+                $sql .= "INSERT INTO $tablename SET " .
                     " gra_use_id='" . $_SESSION['use']['use_id'] . "' , " .
                     " gra_image='" . $fileNameNew . "' , " .
                     " gra_description='" . htmlentities($_POST['gra_description'], ENT_QUOTES) . "' , " .
                     " gra_tags='" . htmlentities($_POST['gra_tags'], ENT_QUOTES) . "' , " .
-//                    " gra_material='" . implode(' ',$_POST['material']) . "' , " .
                     " gra_uploaddate = NOW()";
 
-                header("location:".$maindirectory."index.php");
+//-------------- insert de aangeduide materialen
+                $materials = $_POST['material'];
+                $sql2 = "";
+                foreach ($materials as $material) {
+                    $sql2 = "INSERT INTO gramat SET " .
+                        " gramat_mat_id='" . $material . "'";
+                    ExecuteSQL($sql2);
+                }
 
 
 
