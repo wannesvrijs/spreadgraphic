@@ -9,7 +9,7 @@ ShowMessages();
 ?>
 
 <body>
-<?php PrintNavBar(); //NAVIGATIE ?>
+<?php PrintNavBar();?>
 <main class="container">
     <h1>Questions or remarks...?</h1>
     <?php
