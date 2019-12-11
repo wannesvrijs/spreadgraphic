@@ -5,7 +5,7 @@ require_once "autoload.php";
 $formname = $_POST["formname"];
 $buttonvalue = $_POST['loginbutton'];
 
-if ( $formname == "loginform" AND $buttonvalue == "Log in" )
+if ( $formname == "loginform" AND $buttonvalue == "let's go" )
 {
     if ( ControleLoginWachtwoord( $_POST['use_email'], $_POST['use_paswd'] ) )
     {

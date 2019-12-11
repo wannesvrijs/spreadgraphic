@@ -1,6 +1,7 @@
 <?php
-require_once "lib/autoload.php";
-BasicHead();
+    require_once "lib/autoload.php";
+    ShowMessages();
+    BasicHead();
 ?>
     <body id="page_topfive">
     <?php PrintNavBar(); ?>

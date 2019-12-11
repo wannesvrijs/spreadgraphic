@@ -4,6 +4,12 @@
 @import "https://fonts.googleapis.com/css?family=Merriweather:600&display=swap";
 
 
+.breadcrumb {
+    background: #FF6117;
+    font: 400 100%/1.4 "Source Sans Pro", Arial, sans-serif;
+    color: white;
+}
+
 /*main styling----------------------------- */
 main {
     font: 400 100%/1.4 "Source Sans Pro", Arial, sans-serif;
@@ -255,7 +261,4 @@ label {
 }
 
 /*form input styling----------------------------- */
-
-
-
 
