@@ -34,6 +34,9 @@
                 </div>
             </div>
             <section>
+                <div class="add_graphic_here">
+                    <a><span class="fas fa-plus"></span></a>
+                </div>
                 <?php
                 print LoadTemplate("profile");
                 ?>
