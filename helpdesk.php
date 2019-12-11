@@ -2,21 +2,21 @@
 require_once "lib/autoload.php";
 
 //redirect naar homepage als de gebruiker al niemand is ingelogd
-if ( ! isset($_SESSION['use']) ) { $_SESSION["msg"][] = "Create an account to add graphics!"; header("Location: index.php"); exit; }
+if ( ! isset($_SESSION['use']) ) { $_SESSION["msg"][] = "Create an account to add your question"; header("Location: index.php"); exit; }
 
 BasicHead();
 ShowMessages();
 ?>
 
 <body>
-<div class="container">
+<?php PrintNavBar(); //NAVIGATIE ?>
+<main class="container">
+    <h1>Questions or remarks...?</h1>
     <?php
-    PrintNavBar(); //NAVIGATIE
     print LoadTemplate("helpdesk"); //TEMPLATE
     ?>
+</main>
     <?php PrintFooter(); ?>
-
-</div>
 
 
 </body>

@@ -1,0 +1,20 @@
+<form class="helpdeskform" id=login_form method="post" action="lib/login.php">
+
+    <input type="hidden" id="formname" name="formname" value="helpdesk">
+    <input type="hidden" id="tablename" name="tablename" value="helpdesk">
+    <input type="hidden" id="pkey" name="pkey" value="usr_id">
+
+    <ul>
+        <li class="col-grid-12">
+            <input type="text" id="hel_subject" name="hel_subject" value="" placeholder="subject">
+        </li>
+        <li class="col-grid-12">
+            <textarea class="short" id="hel_question" name="hel_question" placeholder="Your question or remark" title="Captiontext" maxlength="100"></textarea>
+        </li>
+    </ul>
+
+
+
+    <input class="button" name="sendbutton" type="submit" value="Send">
+
+</form>
