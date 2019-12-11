@@ -18,7 +18,8 @@ if ( $_POST["submitbutton"] == "Spread!" )
 
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
-    $fileNameNew = uniqid('',true).".".$fileActualExt;
+    $userid = $_SESSION['use']['use_id'];
+    $fileNameNew = $userid."_".uniqid('',true).".".$fileActualExt;
 
     $allowed = array('jpg','jpeg','png');
 
@@ -38,6 +39,9 @@ if ( $_POST["submitbutton"] == "Spread!" )
                     " gra_tags='" . htmlentities($_POST['gra_tags'], ENT_QUOTES) . "' , " .
 //                    " gra_material='" . implode(' ',$_POST['material']) . "' , " .
                     " gra_uploaddate = NOW()";
+
+                header("location:".$maindirectory."index.php");
+
 
 
                 if (ExecuteSQL($sql)) {

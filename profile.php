@@ -1,6 +1,7 @@
 <?php
 require_once "lib/autoload.php";
 BasicHead();
+ShowMessages();
 ?>
 
 <body>

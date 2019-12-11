@@ -1,7 +1,7 @@
 <main class="container">
     <h1>Profile Settings</h1>
 
-    <form class="col-grid-12 profileform" action="lib/updateprofile.php" method="post" enctype="multipart/form-data">
+    <form class="col-grid-12 profileform" action="lib/profile_adjust.php" method="post" enctype="multipart/form-data">
 
         <input type="hidden" id="formname" name="formname" value="profileform">
         <input type="hidden" id="tablename" name="tablename" value="users">
@@ -46,7 +46,7 @@
             <div class="socialinfo">
                 <li>
                     <label for="facebook">Facebook</label>
-                    <input type="text" id="facebook" name="use_facebook" value="@@use_facebook@@" title="Facebook Username">
+                    <input type="text" id="facebook" name="use_fb" value="@@use_fb@@" title="Facebook Username">
                 </li>
                 <li>
                     <label for="instagram">Instagram</label>

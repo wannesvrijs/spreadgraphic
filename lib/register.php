@@ -9,15 +9,15 @@ $pkey = $_POST["pkey"];
 if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Register" )
 {
     //controle of gebruiker al bestaat
-    $sql = "SELECT * FROM users WHERE use_login='" . $_POST['use_email'] . "' ";
+    $sql = "SELECT * FROM users WHERE use_email='" . $_POST['use_email'] . "' ";
     $data = GetData($sql);
-    if ( count($data) > 0 ) die("Deze gebruiker bestaat reeds! Gelieve een andere login te gebruiken.");
+    if ( count($data) > 0 ) $_SESSION["msg"][] =  "Deze gebruiker bestaat reeds! Gelieve een andere login te gebruiken.";
 
     //controle wachtwoord minimaal 8 tekens
-    if ( strlen($_POST["use_paswd"]) < 8 ) die("Uw wachtwoord moet minstens 8 tekens bevatten!");
+    if ( strlen($_POST["use_paswd"]) < 8 ) $_SESSION["msg"][] = "Uw wachtwoord moet minstens 8 tekens bevatten!";
 
     //controle geldig e-mailadres
-    if (!filter_var($_POST["use_email"], FILTER_VALIDATE_EMAIL)) die("Ongeldig email formaat voor login");
+    if (!filter_var($_POST["use_email"], FILTER_VALIDATE_EMAIL)) $_SESSION["msg"][] = "Ongeldig email formaat voor login";
 
     //wachtwoord coderen
     $password_encrypted = password_hash ( $_POST["use_paswd"] , PASSWORD_DEFAULT );
@@ -35,7 +35,7 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Register"
 
         if ( ControleLoginWachtwoord( $_POST["use_email"] , $_POST["use_paswd"]) )
         {
-            header("Location: /spreadgraphic/index.php");
+            header("Location:".$maindirectory."index.php");
         }
     }
     else

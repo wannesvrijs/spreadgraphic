@@ -1,13 +1,9 @@
 <?php
+require_once "pdo_info.php";
+
 function GetConnection()
 {
-//    $dsn = "mysql:host=localhost;dbname=spreadgraphic";
-//    $user = "root";
-//    $passwd = "mysql";
-
-    $dsn = "mysql:host=185.115.218.166;dbname=wdev_wannes";
-    $user = "wdev_wannes";
-    $passwd = "7VUTt7FOcAY1";
+    global $dsn, $user, $passwd;
 
     $pdo = new PDO($dsn, $user, $passwd);
     return $pdo;
