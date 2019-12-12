@@ -13,9 +13,9 @@ ShowMessages();
     </div>
     <section>
         <?php
-        $data = GetData("select * from graphic");
-        LoadTemplate("index");
-        print ReplaceContent( $data, $template);
+        //$data = GetData("select * from graphic");
+        print LoadTemplate("index");
+        //print ReplaceContent( $data, $template);
         ?>
     </section>
 

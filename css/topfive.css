@@ -25,12 +25,14 @@
 #page_topfive .grid div:nth-of-type(1) {
     grid-column-start: 1;
     grid-column-end: 1;
+}
+#page_topfive .grid div:nth-of-type(1) p {
     font-family: 'Merriweather', serif;
     font-size: 4rem;
     color: #1D1D1D;
 }
 
-/* ELEMENT 2: afbeelding  */
+    /* ELEMENT 2: afbeelding  */
 #page_topfive .grid div:nth-of-type(2) {
     grid-row-start: 1;
     grid-row-end: 3;
@@ -79,11 +81,6 @@
     grid-row-end: 2;
 }
 
-#page_topfive.grid .artisttext {
-    display: flex;
-    justify-content: flex-start;
-}
-
 #page_topfive .grid .artisttext .rondeimage {
     padding-bottom: 0;
 }
@@ -93,13 +90,9 @@
     height: 90px;
 }
 
-#page_topfive .grid .artisttext p {
-    margin-left: 110px;
-    align-items: center;
-}
-
 #page_topfive .grid .artisttext ul {
-    margin-left: 80px;
+    margin-left: 20px;
+    background-color: #4FAE32;
 }
 
 #page_topfive .grid .artisttext ul li {
