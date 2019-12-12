@@ -17,7 +17,7 @@
     display: grid;
     grid-template-rows: 500px 90px;
     grid-template-columns: 2fr 4fr 1fr 4fr 1fr;
-    margin: 80px auto 0 auto;
+    margin: 80px auto 250px auto;
 }
 
 

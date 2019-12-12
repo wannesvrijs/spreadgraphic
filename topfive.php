@@ -11,7 +11,9 @@ ShowMessages();
             <h1>These are our top five graphics this week. Get inspired…</h1>
 
             <?php
-            print LoadTemplate("topfive");
+            $data = GetData("select * from graphic LIMIT 5");
+            $template = LoadTemplate("topfive");
+            print ReplaceContent( $data, $template);
             ?>
 
         </div>
