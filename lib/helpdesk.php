@@ -1,6 +1,10 @@
 <?php
-$registerform = true;
 require_once "autoload.php";
+
+$mailcontent = "email sent by:".$_SESSION['use']['use_name']." ".$_SESSION['use']['use_firstname'].",\r\n".
+            "reply this mail to:".$_SESSION['use']['use_email'].",\r\n\r\n".
+            "content:".$_POST['hel_question'];
+
 
 $formname = $_POST["formname"];
 $tablename = $_POST["tablename"];
@@ -12,6 +16,10 @@ if ( $formname == "helpdesk" AND $_POST['sendbutton'] == "Send" )
         " hel_subject='" . htmlentities($_POST['hel_subject'], ENT_QUOTES) . "' , " .
         " hel_question='" . htmlentities($_POST['hel_question'], ENT_QUOTES) . "' , " .
         " hel_date = NOW()";
+
+
+    mail($mailwannes,"Question :".$_POST['hel_subject'], $mailcontent,'Cc:'.$mailanneleen);
+
 
     if ( ExecuteSQL($sql) )
     {
