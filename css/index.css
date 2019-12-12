@@ -115,7 +115,6 @@
 
 
 #page_index .image_overlay_box .overlay .clickbaar_vlak a {
-    background-color: red;
     width: 100%;
     height: 450px;
     display: block;
@@ -168,7 +167,7 @@
 
 #page_index section.grid {
     display: grid;
-    grid-template-rows: 400px 90px;
+    grid-template-rows: 430px 70px;
     grid-template-columns: 1fr 5fr 5fr 1fr;
     margin: 20px auto 0 auto;
 }
@@ -209,6 +208,29 @@
 #page_index .grid .graphicdetail p.tags {
     color: #ff5100;
     font-weight: 600;
+    margin-bottom: 60px;
+}
+
+#page_index a.like_graphic_popup {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#page_index a.like_graphic_popup span {
+    font-size: 1.2rem;
+    color: #FF5100;
+}
+#page_index .like_graphic_popup:hover .icon-unliked,
+#page_index .like_graphic_popup .icon-liked {
+    display: none;
+}
+#page_index .like_graphic_popup:hover .icon-liked {
+    display: inline;
+}
+
+#page_index a.like_graphic_popup:visited,
+#page_index a.like_graphic_popup:link {
+    text-decoration: none;
 }
 
 /* ELEMENT 3: artist detail */
@@ -229,16 +251,16 @@
 }
 
 #page_index .grid .artisttext ul {
-    margin-left: 80px;
+    margin-left: 50px;
 }
 
 #page_index .grid .artisttext ul li {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
     list-style: none;
 }
 #page_index .grid .artisttext ul li:first-child {
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 
