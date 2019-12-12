@@ -14,7 +14,7 @@ ShowMessages();
     <section>
         <?php
         $data = GetData("select * from graphic ORDER BY gra_uploaddate DESC");
-        LoadTemplate("index");
+        $template = LoadTemplate("index");
         print ReplaceContent( $data, $template);
         ?>
     </section>

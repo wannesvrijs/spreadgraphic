@@ -8,3 +8,14 @@ function preview_image(event)
     }
     reader.readAsDataURL(event.target.files[0]);
 }
+
+function SubmitFormData() {
+    var likes = $(".likes").val();
+    var id = $(".id").val();
+
+    $.post("lib/test_like.php", { likes: likes, id: id},
+        function(data) {
+            $('#results').html(data);
+            $('.myForm')[0].reset();
+        });
+}
