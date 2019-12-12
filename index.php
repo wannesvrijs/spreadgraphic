@@ -13,12 +13,11 @@ ShowMessages();
     </div>
     <section>
         <?php
-        $data = GetData("select * from graphic");
+        $data = GetData("select * from graphic ORDER BY gra_uploaddate DESC");
         LoadTemplate("index");
         print ReplaceContent( $data, $template);
         ?>
     </section>
-
 </div>
 
 <?php PrintFooter(); ?>

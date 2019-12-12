@@ -65,7 +65,6 @@ function LoadTemplate( $name )
 function ReplaceContent( $data, $template_html )
 {
     $returnval = "";
-
     foreach ( $data as $row )
     {
         //replace fields with values in template
@@ -74,10 +73,8 @@ function ReplaceContent( $data, $template_html )
         {
             $content = str_replace("@@$field@@", $value, $content);
         }
-
         $returnval .= $content;
     }
-
     return $returnval;
 }
 
