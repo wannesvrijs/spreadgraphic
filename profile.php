@@ -2,6 +2,20 @@
 require_once "lib/autoload.php";
 BasicHead();
 ShowMessages();
+
+$_SESSION['use']['use_id'];
+$sql= "select * from users where use_id='" . $_GET['id'] . "'";
+$data= GetData($sql);
+var_dump($data);
+
+//$sql= "select * from users where use_id=5";  //moet verwijzen naar een $_session id
+
+//var_dump($data);
+$use_firstname= $data[0]['use_firstname'];
+$use_name= $data[0]['use_name'];
+$use_firstname= $data[0]['use_firstname'];
+
+
 ?>
 
 <body id="page_profile">
@@ -14,7 +28,7 @@ ShowMessages();
                 </div>
                 <!-- name and caption -->
                 <div class="profile_name">
-                    <p class="name">@@use_firstname@@ @@use_name@@</p>
+                    <p class="name">@@fiesqfuhejliklrmzrelhtuejifizgrhou</p>
                     <p>@@use_caption@@</p>
                 </div>
                 <!-- read more -->
@@ -62,7 +76,8 @@ ShowMessages();
 <?php
 $data = GetData("select * from users where img_id=" . $_GET['id'] );
 $template = LoadTemplate("index");
-print ReplaceContent( $data, $template);?>
+print ReplaceContent( $data, $template);
+?>
             </section>
 
 

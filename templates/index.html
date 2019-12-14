@@ -1,12 +1,12 @@
 <!-- afbeelding + overlay-->
 <div class="image_overlay_box">
-    <img src="/wdev_wannes/spreadgraphic/graphics/@@gra_image@@" alt="graphic poster" class="image_graphic">
+    <img src="/wdev_wannes/spreadgraphic/graphics/@@gra_image@@?id=@@gra_use_id@@" alt="graphic poster" class="image_graphic">
         <div class="overlay">
             <div class="overlay_hover_box">
                 <div class="rondeimage artist_image_overlay">
                     <a href="profile.php">
-                        <img src="img/graphic2.jpg" alt="person">
-                        <p>@@use_firstname@@</p>
+                        <img src="/wdev_wannes/spreadgraphic/profile_img/@@use_picture@@?id=@@gra_use_id@@" alt="person">
+                        <p>@@use_firstname@@ @@use_name@@</p>
                     </a>
                 </div>
                 <a href="#" class="like_graphic">
@@ -14,21 +14,21 @@
                     <span class="icon-liked fas fa-heart"></span>
                 </a>
             <div class="clickbaar_vlak">
-                <a href=#popup_graphicdetail"></a>
+                <a href="#popup_graphic?id=@@gra_id@@"></a>
             </div>
             </div>
         </div>
 </div>
 
 <!-- pop-up graphic detail -->
-<div id="popup_graphicdetail" class="overlay_graphicdetail">
+<div id="popup_graphic?id=@@gra_id@@" class="overlay_graphicdetail">
     <div class="popup_graphicdetail">
         <section class="grid">
             <div><img  src="/wdev_wannes/spreadgraphic/graphics/@@gra_image@@?id=@@gra_id@@" alt="#"></div>
             <div class="graphicdetail">
                 <p>@@gra_description@@</p>
                 <p><span>Materials/techniques:</span> Adobe, Offset print, Photograph</p>
-                <p><span>Posted:</span> @@gra_uploaddate@@</p>
+                <p><span>Posted:</span>@@gra_uploaddate@@</p>
                 <p class="tags">@@gra_tags@@</p>
                 <a href="#" class="like_graphic_popup">
                     <span class="icon-unliked far fa-heart"></span>
@@ -38,7 +38,9 @@
             </div>
             <div class="artisttext">
                 <div class="rondeimage">
-                    <a href="profile.php?id=@@use_id@@"><img src="@@use_picture@@" alt="person"></a>
+                    <a href="profile.php?id=@@use_id@@">
+                        <img src="/wdev_wannes/spreadgraphic/profile_img/@@use_picture@@?id=@@gra_use_id@@" alt="person">
+                    </a>
                 </div>
                 <ul>
                     <li>@@use_firstname@@ @@use_name@@</li>
