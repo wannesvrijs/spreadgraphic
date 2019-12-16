@@ -32,6 +32,10 @@ textarea{
     outline: none;
 }
 
+input[type=submit]:hover {
+    background-color: #1D1D1D;
+}
+
 textarea {
     resize: none;
     padding-top: 20px;
@@ -119,7 +123,7 @@ label {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 7;
-    grid-column-end: 11;
+    grid-column-end: 12;
 }
 
 ul.ks-cboxtags li{
@@ -135,7 +139,6 @@ ul.ks-cboxtags li label{
     margin: 3px 3px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     transition: all .2s;
