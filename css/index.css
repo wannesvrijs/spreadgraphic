@@ -128,15 +128,9 @@
      margin-left: 85%;
      color: #FF5100;
  }
-#page_index .like_graphic:hover .icon-unliked,
-#page_index .like_graphic .icon-liked,
-#page_profile .like_graphic:hover .icon-unliked,
-#page_profile .like_graphic .icon-liked
-{
-    display: none;
-}
-#page_index .like_graphic:hover .icon-liked,
-#page_profile .like_graphic:hover .icon-liked
+
+#page_index .like_graphic:hover .fa-heart,
+#page_profile .like_graphic:hover .fa-heart
 {
     display: inline;
 }
@@ -271,13 +265,7 @@
     font-size: 1.2rem;
     color: #FF5100;
 }
-#page_index .like_graphic_popup:hover .icon-unliked,
-#page_index .like_graphic_popup .icon-liked {
-    display: none;
-}
-#page_index .like_graphic_popup:hover .icon-liked {
-    display: inline;
-}
+
 
 #page_index a.like_graphic_popup:visited,
 #page_index a.like_graphic_popup:link {

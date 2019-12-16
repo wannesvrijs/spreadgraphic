@@ -243,7 +243,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 }
 
 .addgraphicform figure img{
-    object-fit:cover;
+    object-fit:contain;
     height: 100%;
     width: 100%;
     background: #E9E9E9;

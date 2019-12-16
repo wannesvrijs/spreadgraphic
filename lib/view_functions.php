@@ -65,12 +65,30 @@ function LoadTemplate( $name )
 function ReplaceContent( $data, $template_html )
 {
     $returnval = "";
-    foreach ( $data as $row )
-    {
+    foreach ($data as $row) {
         //replace fields with values in template
         $content = $template_html;
-        foreach($row as $field => $value)
-        {
+        foreach ($row as $field => $value) {
+            $content = str_replace("@@$field@@", $value, $content);
+        }
+        $returnval .= $content;
+    }
+    return $returnval;
+}
+
+
+require_once 'like.php';
+function ReplaceContentIndex( $data, $template_html )
+{
+    $returnval = "";
+    foreach ($data as $row) {
+        //replace fields with values in template
+        $content = $template_html;
+
+        if (previously_liked($row['gra_id'])) $row['liked'] = 'icon-unliked far ';
+        else $row['liked'] = 'icon-liked fas ';
+
+        foreach ($row as $field => $value) {
             $content = str_replace("@@$field@@", $value, $content);
         }
         $returnval .= $content;

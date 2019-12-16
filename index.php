@@ -47,9 +47,12 @@ ShowMessages();
     </div>
     <section>
         <?php
+
+
         $data = GetData("select * from graphic inner join users on gra_use_id = use_id ORDER BY gra_uploaddate DESC");
         $template = LoadTemplate("index");
-        print ReplaceContent( $data, $template);
+        print ReplaceContentindex( $data, $template);
+//        print ReplaceContent( $data, $template);
         ?>
     </section>
 </div>
