@@ -32,6 +32,14 @@ ShowMessages();
 //   }
 //}
 
+//$timestamp = GetData("SELECT gra_uploaddate FROM graphic");
+//date(F d, Y)
+
+$sql= "select gra_uploaddate from graphic where gra_id='" . $_GET['gra_id'] . "'";
+$timestamp= GetData($sql);
+$timestamp = date("F d, Y");
+var_dump($timestamp);
+
 
 ?>
 

@@ -2,11 +2,7 @@
 require_once "lib/autoload.php";
 BasicHead();
 ShowMessages();
-
 ?>
-
-
-
 
 <body id="page_profile">
 <?php PrintNavBar(); ?>
