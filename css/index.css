@@ -1,10 +1,4 @@
 
-/* footer */
-#page_index .container {
-    margin-bottom: 0; /* footer fixen */
-    padding-bottom: 150px;
-}
-
 /* zoekbalk */
 #page_index .zoekbalk {
     display: flex;
@@ -27,6 +21,22 @@
     font-size: 1.5rem;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
+}
+
+.zoekbalk button {
+    border: none;
+    color: #FF5100;
+    font-size: 1.3em;
+    position: absolute;
+    outline: none;
+    margin-left: -54px;
+    background-color: transparent;
+    padding: 0.7em;
+    cursor: pointer;
+}
+
+.zoekbalk button:hover {
+    color: #1D1D1D;
 }
 
 /* feed masonry */

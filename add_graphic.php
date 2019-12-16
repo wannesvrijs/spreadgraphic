@@ -7,7 +7,7 @@ if ( ! isset($_SESSION['use']) ) { $_SESSION["msg"][] = "Create an account to ad
 BasicHead();
 ShowMessages();
 ?>
-<body class="main">
+<body class="main page_addgraphic">
 <?php PrintNavBar(); ?>
 
 <main class="container">
