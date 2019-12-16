@@ -35,7 +35,6 @@
     column-width: 300px;
     column-gap: 1em;
     padding: 1em;
-    margin-bottom: 200px;
 }
 
 #page_index section img.image_graphic,
@@ -186,7 +185,7 @@
 #page_index .grid div:nth-of-type(1) img{
     height: 100%;
     max-height: 530px;
-    object-fit: cover;
+    object-fit: contain;
     max-width: 380px;
 }
 

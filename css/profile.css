@@ -156,23 +156,21 @@
 
 /* add graphic */
 
-#page_profile section div.add_graphic_here {
-    height: 500px;
+#page_profile section a.add_graphic_here {
     margin-bottom: 1em;
-    background-color: #FF5100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    width: 100%;
+    border: 5px solid #FF5100;
 }
 
-#page_profile section div.add_graphic_here span {
-    color: white;
+#page_profile section a.add_graphic_here span {
+    color: #FF5100;
     font-size: 4em;
+    margin: 250px 155px;
 }
 
-#page_profile section div.add_graphic_here:hover {
-    background-color: #1D1D1D;
-    text-decoration: none;
+#page_profile section a.add_graphic_here:hover {
+    border: 5px solid black;
 }
 
 #page_profile section a.profile_underline:visited,

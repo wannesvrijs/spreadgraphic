@@ -15,7 +15,6 @@ $use_firstname= $data[0]['use_firstname'];
 $use_name= $data[0]['use_name'];
 $use_firstname= $data[0]['use_firstname'];
 
-
 ?>
 
 <body id="page_profile">
@@ -67,11 +66,10 @@ $use_firstname= $data[0]['use_firstname'];
                 </div>
             </div>
             <section>
-                <a href="add_graphic.php" class="profile_underline">
-                    <div class="add_graphic_here">
+                    <a href="add_graphic.php" class="profile_underline add_graphic_here">
+
                         <span class="fas fa-plus"></span>
-                    </div>
-                </a>
+                    </a>
 
 <?php
 $data = GetData("select * from users where img_id=" . $_GET['id'] );
