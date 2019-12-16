@@ -12,7 +12,8 @@ ShowMessages();
 <?php PrintNavBar(); ?>
         <div class="container">
             <?php
-            $data = GetData("select * from users where use_id='" . $_GET['user'] . "'");
+            if (IsMe()) $data = GetData("select * from users where use_id='" . $_SESSION['use']['use_id'] . "'");
+            else $data = GetData("select * from users where use_id='" . $_GET['id'] . "'");
             $template = LoadTemplate("profile_top");
             print ReplaceContent( $data, $template);
             ?>
@@ -21,7 +22,8 @@ ShowMessages();
                     <span class="fas fa-plus"></span>
                 </a>
                 <?php
-                    $data = GetData("select * from graphic where gra_use_id='" . $_GET['user'] . "' ORDER BY gra_uploaddate DESC");
+                    if (IsMe()) $data = GetData("select * from graphic where gra_use_id='" . $_SESSION['use']['use_id'] . "' ORDER BY gra_uploaddate DESC");
+                    else $data = GetData("select * from graphic where gra_use_id='" . $_GET['id'] . "' ORDER BY gra_uploaddate DESC");
                     $template = LoadTemplate("index");
                     print ReplaceContent( $data, $template);
                 ?>
