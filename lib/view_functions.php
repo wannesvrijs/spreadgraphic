@@ -85,8 +85,8 @@ function ReplaceContentIndex( $data, $template_html )
         //replace fields with values in template
         $content = $template_html;
 
-        if (previously_liked($row['gra_id'])) $row['liked'] = 'icon-unliked far ';
-        else $row['liked'] = 'icon-liked fas ';
+        if (previously_liked($row['gra_id'])) $row['liked'] = 'far';
+        else $row['liked'] = 'fas';
 
         foreach ($row as $field => $value) {
             $content = str_replace("@@$field@@", $value, $content);
