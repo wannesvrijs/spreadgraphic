@@ -5,14 +5,15 @@ ShowMessages();
 
 $sql= "select * from users where use_id='" . $_SESSION['use']['use_id'] . "'";
 $data= GetData($sql);
-var_dump($data);
 
-//$sql= "select * from users where use_id=5";  //moet verwijzen naar een $_session id
-
-//var_dump($data);
-//$use_firstname= $data[0]['use_firstname'];
-//$use_name= $data[0]['use_name'];
-//$use_firstname= $data[0]['use_firstname'];
+$use_firstname= $data[0]['use_firstname'];
+$use_name= $data[0]['use_name'];
+$use_picture= $data[0]['use_picture'];
+$use_caption= $data[0]['use_caption'];
+$use_education = $data[0]['use_education'];
+$use_about = $data[0]['use_about'];
+$use_instagram = $data[0]['use_instagram'];
+$use_facebook = $data[0]['use_facebook'];
 
 ?>
 
@@ -22,12 +23,12 @@ var_dump($data);
             <div class="grid_artistpage">
                 <!-- profile picture -->
                 <div class="rondeimage profile_picture">
-                    <img src="@@use_picture@@" alt="person">
+                    <img src="/wdev_wannes/spreadgraphic/profile_img/<?php echo $use_picture; ?>" alt="person">
                 </div>
                 <!-- name and caption -->
                 <div class="profile_name">
-                    <p class="name">@@use_firstname@@ @@use_name@@</p>
-                    <p>@@use_caption@@</p>
+                    <p class="name"><?php echo $use_firstname . ' ' . $use_name;?></p>
+                    <p><?php echo $use_caption; ?></p>
                 </div>
                 <!-- read more -->
                 <div class="profile_readmore">
@@ -42,11 +43,11 @@ var_dump($data);
                         <div class="popup_text">
                             <div class="education">
                                 <h3>Education</h3>
-                                <p>@@use_education@@</p>
+                                <p><?php echo $use_education; ?></p>
                             </div>
                             <div class="about">
                                 <h3>About</h3>
-                                <p>@@use_about@@</p>
+                                <p><?php echo $use_about; ?></p>
                             </div>
                         </div>
                         <a class="close" href="#">&times;</a>
@@ -54,31 +55,28 @@ var_dump($data);
                 </div>
                 <!-- social media -->
                 <div class="profile_social">
-                    <a href="#" title="" class="profile_underline">
+                    <a href="<?php echo $use_facebook; ?>" title="" class="profile_underline">
                         <span class="fab fa-facebook-f"></span>
                         <span class="sr-only">Facebook pagina</span>
                     </a>
-                    <a href="#" title="" class="profile_underline">
+                    <a href="<?php echo $use_instagram; ?>" title="" class="profile_underline">
                         <span class="fab fa-instagram"></span>
                         <span class="sr-only">Instagram pagina</span>
                     </a>
                 </div>
             </div>
             <section>
-                    <a href="add_graphic.php" class="profile_underline add_graphic_here">
-
-                        <span class="fas fa-plus"></span>
-                    </a>
-
-<?php
-$data = GetData("select * from users where img_id=" . $_GET['id'] );
-$template = LoadTemplate("index");
-print ReplaceContent( $data, $template);
-?>
+                <a href="add_graphic.php" class="profile_underline add_graphic_here">
+                    <span class="fas fa-plus"></span>
+                </a>
+                <?php
+                    $data = GetData("select * from graphic where gra_use_id='" . $_SESSION['use']['use_id'] . "' ORDER BY gra_uploaddate DESC");
+                    $template = LoadTemplate("index");
+                    print ReplaceContent( $data, $template);
+                ?>
             </section>
-
-
         </div>
-<?php PrintFooter(); ?>
+
+    <?php PrintFooter(); ?>
     </body>
 </html>
