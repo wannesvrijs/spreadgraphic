@@ -21,13 +21,19 @@
             <li class="grid">
                 <textarea class = "short tags" name="gra_tags" value="@@gra_tags@@" placeholder="#tags (seperated by a comma)" title="graphic description"></textarea>
             </li>
-            <li>
-                <input type="checkbox" value="1" name="material[]">Pencil
-                <input type="checkbox" value="2" name="material[]">Ink
-                <input type="checkbox" value="3" name="material[]">Acrylics
-                <input type="checkbox" value="4" name="material[]">Oil
-                <input type="checkbox" value="5" name="material[]">Watercolor
-                <input type="checkbox" value="6" name="material[]">Spraypaint
+        </ul>
+        <div class="checkbox_container">
+            <ul class="ks-cboxtags">
+                <li><input type="checkbox" id="checkboxOne" value="1" name="material[]"><label for="checkboxOne"><span class="fas fa-plus fa-fw"></span>Pencil</label></li>
+                <li><input type="checkbox" id="checkboxTwo" value="2" name="material[]"><label for="checkboxTwo"><span class="fas fa-plus fa-fw"></span>Ink</label></li>
+                <li><input type="checkbox" id="checkboxThree" value="3" name="material[]"><label for="checkboxThree"><span class="fas fa-plus fa-fw"></span>Acrylics</label></li>
+                <li><input type="checkbox" id="checkboxFour" value="4" name="material[]"><label for="checkboxFour"><span class="fas fa-plus fa-fw"></span>Oil</label></li>
+                <li><input type="checkbox" id="checkboxFive" value="5" name="material[]"><label for="checkboxFive"><span class="fas fa-plus fa-fw"></span>Watercolor</label></li>
+                <li><input type="checkbox" id="checkboxSix" value="6" name="material[]"><label for="checkboxSix"><span class="fas fa-plus fa-fw"></span>Spraypaint</label></li>
+
+
+
+
                 <input type="checkbox" value="7" name="material[]">Photograph
                 <input type="checkbox" value="8" name="material[]">Adobe
                 <input type="checkbox" value="9" name="material[]">Gimp
@@ -39,8 +45,10 @@
                 <input type="checkbox" value="15" name="material[]">Etch
                 <input type="checkbox" value="16" name="material[]">Risograph
                 <input type="checkbox" value="17" name="material[]">Silkscreen
-            </li>
-        </ul>
+            </ul>
+        </div>
+
+
     </div> <!--col-grid-12 -->
 
     <input class="button submit" name="submitbutton" type="submit" value="Spread!">

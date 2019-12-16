@@ -3,7 +3,6 @@ require_once "lib/autoload.php";
 BasicHead();
 ShowMessages();
 
-$_SESSION['use']['use_id'];
 $sql= "select * from users where use_id='" . $_GET['id'] . "'";
 $data= GetData($sql);
 var_dump($data);
@@ -11,9 +10,9 @@ var_dump($data);
 //$sql= "select * from users where use_id=5";  //moet verwijzen naar een $_session id
 
 //var_dump($data);
-$use_firstname= $data[0]['use_firstname'];
-$use_name= $data[0]['use_name'];
-$use_firstname= $data[0]['use_firstname'];
+//$use_firstname= $data[0]['use_firstname'];
+//$use_name= $data[0]['use_name'];
+//$use_firstname= $data[0]['use_firstname'];
 
 ?>
 
@@ -27,7 +26,7 @@ $use_firstname= $data[0]['use_firstname'];
                 </div>
                 <!-- name and caption -->
                 <div class="profile_name">
-                    <p class="name">@@fiesqfuhejliklrmzrelhtuejifizgrhou</p>
+                    <p class="name">@@use_firstname@@ @@use_name@@</p>
                     <p>@@use_caption@@</p>
                 </div>
                 <!-- read more -->

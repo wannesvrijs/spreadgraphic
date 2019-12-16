@@ -96,10 +96,13 @@ label {
 
 /*grid 2 add_graphic-----------------------------------------------------*/
 
-.addgraphicform .img-container { grid-column: 3 / span 3; }
+.addgraphicform .img-container {
+    grid-column: 3 / span 3;
+    grid-row: 1 / span 3;
+}
 .addgraphicform ul { grid-column: 7 / span 4; }
 
-.addgraphicform ul .grid{
+.addgraphicform ul .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
@@ -107,6 +110,63 @@ label {
 }
 
 .addgraphicform li textarea { grid-column: 1 / span 4 }
+
+/* checkbox styling*/
+
+.checkbox_container {
+    max-width: 640px;
+    font-size: 13px;
+    grid-column-start: 7;
+    grid-column-end: 11;
+}
+
+ul.ks-cboxtags li{
+    display: inline;
+}
+
+ul.ks-cboxtags li label{
+    display: inline-block;
+    border: 1px solid #777;
+    color: #777;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 3px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li label {
+    padding: 0.5em 0.8em;
+    cursor: pointer;
+    color: #777;
+    font-weight: 600;
+}
+
+ul.ks-cboxtags li label span {
+    margin-right: 0.5em;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+    background-color: #FF5100;
+    color: #fff;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+    display: absolute;
+}
+ul.ks-cboxtags li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+    border: 1px solid #FF5100;
+}
 
 
 
