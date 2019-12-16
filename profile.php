@@ -42,7 +42,7 @@ $use_facebook = $data[0]['use_facebook'];
                 <div id="popup_readmore" class="overlay">
                     <div class="popup">
                         <div class="rondeimage">
-                            <img src="img/graphic2.jpg" alt="person">
+                            <img src="/wdev_wannes/spreadgraphic/profile_img/<?php echo $use_picture; ?>" alt="person">
                         </div>
                         <div class="popup_text">
                             <div class="education">

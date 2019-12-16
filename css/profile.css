@@ -77,6 +77,7 @@
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    z-index: 2;
 }
 #page_profile .overlay:target {
     visibility: visible;
@@ -115,6 +116,7 @@
     font-weight: 600;
     margin-right: 2em;
     display: inline-block;
+    color: black;
 }
 
 #page_profile .popup .popup_text p {
