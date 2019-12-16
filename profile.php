@@ -3,7 +3,7 @@ require_once "lib/autoload.php";
 BasicHead();
 ShowMessages();
 
-$sql= "select * from users where use_id='" . $_GET['id'] . "'";
+$sql= "select * from users where use_id='" . $_SESSION['use']['use_id'] . "'";
 $data= GetData($sql);
 var_dump($data);
 
