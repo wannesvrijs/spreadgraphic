@@ -34,7 +34,17 @@
 
 #page_profile .grid_artistpage div p.name {
     font-size: 1.4rem;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
+    margin-left: 2em;
+}
+
+#page_profile .grid_artistpage div p.name span  {
+    margin-left: 0.5em;
+    font-size: 1.5em;
+}
+
+#page_profile .grid_artistpage div p.name span:hover  {
+    color: black;
 }
 
 /* ELEMENT 3: read more */

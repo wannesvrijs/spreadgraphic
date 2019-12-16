@@ -27,7 +27,11 @@ $use_facebook = $data[0]['use_facebook'];
                 </div>
                 <!-- name and caption -->
                 <div class="profile_name">
-                    <p class="name"><?php echo $use_firstname . ' ' . $use_name;?></p>
+                    <p class="name"><?php echo $use_firstname . ' ' . $use_name;?>
+                        <a href="profile_adjust.php">
+                            <span class="fas fa-cog"></span>
+                        </a>
+                    </p>
                     <p><?php echo $use_caption; ?></p>
                 </div>
                 <!-- read more -->
