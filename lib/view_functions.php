@@ -91,3 +91,10 @@ function ReplaceContentOneRow( $row, $template_html )
 
     return $content;
 }
+
+//check of de pagina toebehoord aan de momenteel ingelogde user
+function IsMe ()
+{
+    if ($_GET['id'] === null or $_GET['id'] == $_SESSION['id']) return true;
+    else return false;
+}

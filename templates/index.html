@@ -4,8 +4,8 @@
         <div class="overlay">
             <div class="overlay_hover_box">
                 <div class="rondeimage artist_image_overlay">
-                    <a href="profile.php">
-                        <img src="/wdev_wannes/spreadgraphic/profile_img/@@use_picture@@?id=@@gra_use_id@@" alt="person">
+                    <a href="profile.php?id=@@gra_use_id@@">
+                        <img src="/wdev_wannes/spreadgraphic/profile_img/@@use_picture@@" alt="person">
                         <p>@@use_firstname@@ @@use_name@@</p>
                     </a>
                 </div>
@@ -13,6 +13,10 @@
                     <span class="icon-unliked far fa-heart"></span>
                     <span class="icon-liked fas fa-heart"></span>
                 </a>
+                <form action="lib/deletefile.php" method="post">
+                    <input type="hidden" name="gra_id" value="@@gra_id@@">
+                    <input class="button" name="deletebutton" type="submit" value="delete">
+                </form>
             <div class="clickbaar_vlak">
                 <a href="#popup_graphic?id=@@gra_id@@"></a>
             </div>
@@ -35,6 +39,10 @@
                     <span class="icon-liked fas fa-heart"></span>
                     I like this!
                 </a>
+                <form action="lib/deletefile.php" method="post">
+                    <input type="hidden" name="gra_id" value="@@gra_id@@">
+                    <input class="button" name="deletebutton" type="submit" value="delete">
+                </form>
             </div>
             <div class="artisttext">
                 <div class="rondeimage">
