@@ -35,8 +35,3 @@ function GetInsertedId( $sql )
     $last_id = $conn->lastInsertId();
     return $last_id;
 }
-
-function GetGraphics() {
-    $graphics = GetData("select * from graphic ORDER BY gra_uploaddate DESC");
-    return $graphics;
-}

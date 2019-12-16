@@ -51,19 +51,24 @@ if ( $_POST["submitbutton"] == "Spread!" )
 
                 if (ExecuteSQL($sql)) {
                     $_SESSION["msg"][] = "uw werk werd toegevoed!";
+                    header("location".$maindirectory."profile.php");
 
 
                 } else {
                     $_SESSION["msg"][] = "Sorry, er liep iets fout. uw werk werd niet toegevoed";
+                    header("location".$maindirectory."profile.php");
                 }
             } else {
                 $_SESSION["msg"][] = "your image exceeds the maximum file size";
+                header("location".$maindirectory."add_graphic.php");
             }
         } else {
             $_SESSION["msg"][] = "there was an error uploading your file";
+            header("location".$maindirectory."add_graphic.php");
         }
     } else {
         $_SESSION["msg"][] = "no files of this kind are allowed";
+        header("location".$maindirectory."add_graphic.php");
     }
 }
 

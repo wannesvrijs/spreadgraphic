@@ -25,7 +25,13 @@ function like_count($gra_id) {
 //voeg een tabel toe aan de likes tabel bij een like, voeg 1tje toe aan het totaal aantal likes en trek terug af indien er reeds geliked is
 function add_like($gra_id) {
     $gra_id = (int)$gra_id;
-    ExecuteSQL("Update graphic set gra_likes = gra_likes + 1 where gra_id = $gra_id");
-    ExecuteSQL("Insert into likes set like_gra_id = $gra_id, like_use_id =".$_SESSION['use']['use_id']);
+
+    if (previously_liked($gra_id) === true) {
+        ExecuteSQL("Update graphic set gra_likes = gra_likes - 1 where gra_id = $gra_id");
+        ExecuteSQL("Delete from likes where like_gra_id = $gra_id and like_use_id =".$_SESSION['use']['use_id']);
+    } else {
+        ExecuteSQL("Update graphic set gra_likes = gra_likes + 1 where gra_id = $gra_id");
+        ExecuteSQL("Insert into likes set like_gra_id = $gra_id, like_use_id =".$_SESSION['use']['use_id']);
+    }
 
 }

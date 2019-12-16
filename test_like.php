@@ -6,15 +6,12 @@ BasicHead();
 ?>
 
 <body>
-<?php
-
-$data = GetData("select * from graphic ORDER BY gra_uploaddate DESC");
-$template = LoadTemplate("indextwee");
-print ReplaceContent( $data, $template);
-
-
-;
-
-?>
+<section>
+    <?php
+    $data = GetData("select * from graphic inner join users on gra_use_id = use_id ORDER BY gra_uploaddate DESC");
+    $template = LoadTemplate("index");
+    print ReplaceContent( $data, $template);
+    ?>
+</section>
 </body>
 </html>

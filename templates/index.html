@@ -9,7 +9,7 @@
                         <p>@@use_firstname@@ @@use_name@@</p>
                     </a>
                 </div>
-                <a onclick="like_add(@@gra_id@@)" href="#" title="like" class="like_graphic">
+                <a onclick="like_add(@@gra_id@@); return false" href="#" title="like" class="like_graphic">
                     <span class="icon-unliked far fa-heart"></span>
                     <span class="icon-liked fas fa-heart"></span>
                 </a>
@@ -30,7 +30,7 @@
                 <p><span>Materials/techniques:</span> Adobe, Offset print, Photograph</p>
                 <p><span>Posted:</span>@@gra_uploaddate@@</p>
                 <p class="tags">@@gra_tags@@</p>
-                <a onclick="like_add(@@gra_id@@)" href="#" title="like" class="like_graphic_popup">
+                <a onclick="like_add(@@gra_id@@); return false" href="#" title="like" class="like_graphic_popup">
                     <span class="icon-unliked far fa-heart"></span>
                     <span class="icon-liked fas fa-heart"></span>
                     I like this!
