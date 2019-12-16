@@ -1,11 +1,11 @@
 
 /* footer */
+
 footer {
     position: absolute;
     right: 0;
-    bottom: -50px;
+    bottom: 0;
     left: 0;
-    background-color: red;
 }
 
 footer ul {
@@ -22,5 +22,11 @@ footer ul li a {
     font-weight: 400;
     font-family: 'Merriweather', serif;
     text-decoration: none;
-    margin: 0 4em 0 0;
+    margin: 4em 4em 1em 0;
 }
+
+#page_index .container,
+#page_topfive .container{
+    padding-bottom: 80px;
+}
+

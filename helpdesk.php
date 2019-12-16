@@ -10,7 +10,7 @@ ShowMessages();
 
 <body>
 <?php PrintNavBar();?>
-<main class="container">
+<main class="container container_helpdesk">
     <h1>Questions or remarks...?</h1>
     <?php
     print LoadTemplate("helpdesk"); //TEMPLATE

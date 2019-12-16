@@ -182,15 +182,22 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 .loginform li input,
 .loginform li p { grid-column: 5 / span 4; }
 
-.loginform li p { padding: 0 25px;}
+.loginform li p {
+    padding: 0 25px;
+    font-size: 0.8rem;
+}
 
 /*grid 2 helpdesk -----------------------------------------------------*/
 
 .helpdeskform li input,
 .helpdeskform li textarea,
-.helpdeskform li p { grid-column: 3 / span 8; }
+.helpdeskform li p { grid-column: 4 / span 6; }
 
 .helpdeskform li p { padding: 0 25px;}
+
+.helpdeskform li textarea {
+    height: 200px;
+}
 
 
 
@@ -260,7 +267,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 .addgraphicform .button{
     display: block;
     width: 160px;
-    margin: 30px auto;
+    margin: 80px auto 40px;
 }
 
 /*login styling----------------------------- */
@@ -310,3 +317,22 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 /*form input styling----------------------------- */
 
+.page_register .container {
+    padding-top: 80px;
+}
+
+.page_addgraphic .container {
+    padding: 40px 0 80px;
+}
+
+.page_addgraphic .button:hover {
+    background: #1D1D1D;
+}
+
+.page_addgraphic form {
+    margin-top: 50px;
+}
+
+.container_helpdesk {
+    padding-top: 120px;
+}

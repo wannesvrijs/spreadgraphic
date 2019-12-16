@@ -4,15 +4,33 @@ BasicHead();
 ShowMessages();
 
 
-if(isset($_POST['submit_search'])) {
-    $search = mysqli_real_escape_string($conn, $_POST['search']);
-    $sql_search = "SELECT * FROM graphic WHERE gra_tags LIKE '%$search%' OR  gra_description LIKE '%$search%' ORDER BY gra_uploaddate DESC";
+//if(isset($_POST['search'])) {
+//    $data_search = GetData ("SELECT * FROM graphic WHERE gra_tags LIKE '%$search%' OR  gra_description LIKE '%$search%' ORDER BY gra_uploaddate DESC");
+//    if(!$query_results_search > 0){
+//        echo "There are no results matching your search ";//
+//    } else {
+//        $template = LoadTemplate("index");
+//        print ReplaceContent( $data, $template);
+//    }
+//}
 
-}
+//$output = '';
 
-
-
-
+//if(isset($_POST['search'])) {
+//    $searchq = $_POST['search'];
+//    $result = GetData ("SELECT * FROM graphic WHERE gra_tags LIKE '%$searchq%' ORDER BY gra_uploaddate DESC");
+//    $row = $result->fetch_assoc();
+//    if(!$result) {
+//       echo 'er loopt iets fout bij het zoeken';
+//    }
+//    if($row['COUNT(*)'] == 0 ){
+//        $output = 'There are no results';
+//    } else {
+//        while($row = mysqli_fetch_assoc($data_search)) {
+//            $output .= ' wtf is dees';
+//       }
+//   }
+//}
 
 
 ?>
@@ -24,7 +42,7 @@ if(isset($_POST['submit_search'])) {
     <div class="zoekbalk">
         <form action="index.php" method="POST">
             <input type="text" name="search" placeholder="#">
-            <button type="submit" name="submit_search"></button>
+            <button type="submit" name="submit_search" class="fas fa-search" ></button>
         </form>
     </div>
     <section>
