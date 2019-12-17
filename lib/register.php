@@ -11,13 +11,18 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Register"
     //controle of gebruiker al bestaat
     $sql = "SELECT * FROM users WHERE use_email='" . $_POST['use_email'] . "' ";
     $data = GetData($sql);
-    if ( count($data) > 0 ) $_SESSION["msg"][] =  "Deze gebruiker bestaat reeds! Gelieve een andere login te gebruiken.";
-
-    //controle wachtwoord minimaal 8 tekens
-    if ( strlen($_POST["use_paswd"]) < 8 ) $_SESSION["msg"][] = "Uw wachtwoord moet minstens 8 tekens bevatten!";
+    if ( count($data) > 0 ) $_SESSION["msg"][] =  "This email address is already in use, please use a different one";
 
     //controle geldig e-mailadres
-    if (!filter_var($_POST["use_email"], FILTER_VALIDATE_EMAIL)) $_SESSION["msg"][] = "Ongeldig email formaat voor login";
+    if (!filter_var($_POST["use_email"], FILTER_VALIDATE_EMAIL)) $_SESSION["msg"][] = "Invalid email adress";
+
+    //controle wachtwoord minimaal 8 tekens
+    if ( strlen($_POST["use_paswd"]) < 8 ) $_SESSION["msg"][] = "Your password has to contain a minimum of eight characters";
+
+    //controle wachtwoorden matchen
+    if ($_POST["use_paswdcheck"] <> $_POST["use_paswd"]) $_SESSION["msg"][] = "Your passwords do not match";
+
+    if (isset($_SESSION["msg"])) {header("Location:".$maindirectory."register.php"); exit;}
 
     //wachtwoord coderen
     $password_encrypted = password_hash ( $_POST["use_paswd"] , PASSWORD_DEFAULT );

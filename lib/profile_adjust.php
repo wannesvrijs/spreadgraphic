@@ -48,18 +48,23 @@ if ( $_POST["submitbutton2"] == "Spread!" )
 
                 if (ExecuteSQL($sql)) {
                     $_SESSION["msg"][] = "your profile has been updated!";
+                    header("location:".$maindirectory."profile.php");
 
                 } else {
                     $_SESSION["msg"][] = "something went wrong, your profile hasn't been updated";
+                    header("location:".$maindirectory."profile_adjust.php");
                 }
             } else {
                 $_SESSION["msg"][] = "your image exceeds the maximum file size";
+                header("location:".$maindirectory."profile_adjust.php");
             }
         } else {
             $_SESSION["msg"][] = "there was an error uploading your file";
+            header("location:".$maindirectory."profile_adjust.php");
         }
     } else {
         $_SESSION["msg"][] = "no files of this kind are allowed";
+        header("location:".$maindirectory."profile_adjust.php");
     }
 }
 
