@@ -107,6 +107,7 @@
 #page_topfive .grid .artisttext .rondeimage img {
     width: 90px;
     height: 90px;
+    object-fit: cover;
 }
 
 #page_topfive .grid .artisttext ul {
