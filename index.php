@@ -16,6 +16,7 @@ ShowMessages();
     </div>
     <section>
         <?php
+        //ZOEKBALK
         if(isset($_POST['search'])) {
             $searchq = $_POST['search'];
             $result = GetData ("SELECT * FROM graphic WHERE gra_tags LIKE '%$searchq%' ORDER BY gra_uploaddate DESC");
@@ -42,7 +43,6 @@ ShowMessages();
             $template = LoadTemplate("index");
             print ReplaceContentindex( $data, $template);
         }
-
         ?>
     </section>
 </div>
