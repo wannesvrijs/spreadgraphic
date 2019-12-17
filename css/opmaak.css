@@ -182,8 +182,6 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 .loginform li input,
 .loginform li p { grid-column: 5 / span 4; }
 
-.loginform li
-
 .loginform li p {
     padding: 0 25px;
     font-size: 0.8rem;
@@ -336,7 +334,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 }
 
 .container_helpdesk {
-    padding-top: 120px;
+    padding-top: 40px;
 }
 
 #page_profile .container {

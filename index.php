@@ -40,7 +40,6 @@ $timestamp= GetData($sql);
 $timestamp = date("F d, Y");
 var_dump($timestamp);
 
-
 ?>
 
 <body id="page_index">
@@ -61,6 +60,7 @@ var_dump($timestamp);
         $template = LoadTemplate("index");
         print ReplaceContentindex( $data, $template);
 //        print ReplaceContent( $data, $template);
+
         ?>
     </section>
 </div>

@@ -1,5 +1,3 @@
-<!--NOG NIET VERWIJDEREN !!!!!!!!!!!!!!!!  (tot nader order volgt) ;)-->
-
 <?php
 include "lib/autoload.php";
 BasicHead();
@@ -8,9 +6,12 @@ BasicHead();
 <body>
 <section>
     <?php
-    $data = GetData("select * from graphic inner join users on gra_use_id = use_id ORDER BY gra_uploaddate DESC");
-    $template = LoadTemplate("index");
-    print ReplaceContent( $data, $template);
+    $data = GetData("select mat_kind from graphic
+        inner join gramat on gra_id = gramat_gra_id
+        inner join material on gramat_mat_id = mat_id
+        ORDER BY gra_uploaddate DESC");
+    $template = LoadTemplate("indextwee"); //TEMPLATE
+    echo ReplaceContent( $data, $template);
     ?>
 </section>
 </body>

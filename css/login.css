@@ -1,0 +1,27 @@
+#page_login form p {
+    padding-top: 1em;
+    font-size: 0.9rem;
+}
+
+#page_login form input.button:hover {
+    background-color: white;
+    color: #FF5100;
+}
+
+#page_login footer ul li a{
+    color: white;
+}
+
+#page_login nav ul li a {
+    color: white;
+}
+
+#page_login .container {
+    margin-top: 130px;
+
+}
+
+body #page_login {
+    padding-bottom: -50px;
+}
+
