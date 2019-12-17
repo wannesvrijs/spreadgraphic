@@ -24,14 +24,14 @@ if ( $formname == "helpdesk" AND $_POST['sendbutton'] == "Send" )
     if ( ExecuteSQL($sql) )
     {
         // een melding weergeven
-        $_SESSION["msg"][] = "Uw vraag is verzonden! " ;
+        $_SESSION["msg"][] = "Your question has been sent! " ;
         // na het clicken van de knop ga je naar de index pagina
         header("Location:".$maindirectory."index.php");
     }
     else
     {
         // als er een fout gebeurd krijg je deze melding
-        $_SESSION["msg"][] = "Sorry, er liep iets fout. Er werd geen vraag verstuurd!" ;
+        $_SESSION["msg"][] = "Sorry, something went wrong. No question was sent!" ;
         // bij een fout, blijf je op de pagina
         header("Location:".$maindirectory."helpdesk.php");
     }

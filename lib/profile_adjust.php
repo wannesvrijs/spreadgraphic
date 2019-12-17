@@ -43,23 +43,23 @@ if ( $_POST["submitbutton2"] == "Spread!" )
                     WHERE use_id = " . $_SESSION['use']['use_id'];
 
                 if (ExecuteSQL($sql)) {
-                    $_SESSION["msg"][] = "your profile has been updated!";
+                    $_SESSION["msg"][] = "Your profile has been updated!";
                     header("location:".$maindirectory."profile.php");
 
                 } else {
-                    $_SESSION["msg"][] = "something went wrong, your profile hasn't been updated";
+                    $_SESSION["msg"][] = "Something went wrong, your profile hasn't been updated!";
                     header("location:".$maindirectory."profile_adjust.php");
                 }
             } else {
-                $_SESSION["msg"][] = "your image exceeds the maximum file size";
+                $_SESSION["msg"][] = "Your image exceeds the maximum file size!";
                 header("location:".$maindirectory."profile_adjust.php");
             }
         } else {
-            $_SESSION["msg"][] = "there was an error uploading your file";
+            $_SESSION["msg"][] = "There was an error uploading your file!";
             header("location:".$maindirectory."profile_adjust.php");
         }
     } else {
-        $_SESSION["msg"][] = "no files of this kind are allowed";
+        $_SESSION["msg"][] = "No files of this kind are allowed!";
         header("location:".$maindirectory."profile_adjust.php");
     }
 }

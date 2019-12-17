@@ -2,7 +2,7 @@
 require_once "lib/autoload.php";
 
 //redirect naar homepage als de gebruiker al niemand is ingelogd
-if ( ! isset($_SESSION['use']) ) { $_SESSION["msg"][] = "Create an account to add your question"; header("Location: index.php"); exit; }
+if ( ! isset($_SESSION['use']) ) { $_SESSION["msg"][] = "Create an account to add your question!"; header("Location: index.php"); exit; }
 
 BasicHead();
 ShowMessages();

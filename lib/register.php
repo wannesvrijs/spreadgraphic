@@ -11,16 +11,16 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Register"
     //controle of gebruiker al bestaat
     $sql = "SELECT * FROM users WHERE use_email='" . $_POST['use_email'] . "' ";
     $data = GetData($sql);
-    if ( count($data) > 0 ) $_SESSION["msg"][] =  "This email address is already in use, please use a different one";
+    if ( count($data) > 0 ) $_SESSION["msg"][] =  "This email address is already in use, please use a different one!";
 
     //controle geldig e-mailadres
-    if (!filter_var($_POST["use_email"], FILTER_VALIDATE_EMAIL)) $_SESSION["msg"][] = "Invalid email adress";
+    if (!filter_var($_POST["use_email"], FILTER_VALIDATE_EMAIL)) $_SESSION["msg"][] = "Invalid email adress!";
 
     //controle wachtwoord minimaal 8 tekens
-    if ( strlen($_POST["use_paswd"]) < 8 ) $_SESSION["msg"][] = "Your password has to contain a minimum of eight characters";
+    if ( strlen($_POST["use_paswd"]) < 8 ) $_SESSION["msg"][] = "Your password has to contain a minimum of eight characters!";
 
     //controle wachtwoorden matchen
-    if ($_POST["use_paswdcheck"] <> $_POST["use_paswd"]) $_SESSION["msg"][] = "Your passwords do not match";
+    if ($_POST["use_paswdcheck"] <> $_POST["use_paswd"]) $_SESSION["msg"][] = "Your passwords do not match!";
 
     if (isset($_SESSION["msg"])) {header("Location:".$maindirectory."register.php"); exit;}
 
@@ -36,7 +36,7 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Register"
 
     if ( ExecuteSQL($sql) )
     {
-        $_SESSION["msg"][] = "Bedankt voor uw registratie!" ;
+        $_SESSION["msg"][] = "Thank you for registering!" ;
 
         if ( ControleLoginWachtwoord( $_POST["use_email"] , $_POST["use_paswd"]) )
         {
@@ -45,7 +45,7 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Register"
     }
     else
     {
-        $_SESSION["msg"][] = "Sorry, er liep iets fout. Uw gegevens werden niet goed opgeslagen" ;
+        $_SESSION["msg"][] = "Sorry, something went wrong. Your data was not saved correctly!" ;
     }
 }
 ?>

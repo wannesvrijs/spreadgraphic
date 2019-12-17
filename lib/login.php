@@ -9,17 +9,17 @@ if ( $formname == "loginform" AND $buttonvalue == "let's go" )
 {
     if ( ControleLoginWachtwoord( $_POST['use_email'], $_POST['use_paswd'] ) )
     {
-        $_SESSION["msg"][] = "Welkom, " . $_SESSION['use']['use_firstname'] . "!" ;
+        $_SESSION["msg"][] = "Welcome, " . $_SESSION['use']['use_firstname'] . "!" ;
         header("Location:".$maindirectory."index.php");
     }
     else
     {
-        $_SESSION["msg"][] = "Sorry! Verkeerde login of wachtwoord!";
+        $_SESSION["msg"][] = "Sorry! Wrong login or password!";
         header("Location:".$maindirectory."login.php");
     }
 }
 else
 {
-    $_SESSION["msg"][] = "Foute formname of buttonvalue";
+    $_SESSION["msg"][] = "Wrong formname or buttonvalue!";
 }
 ?>
