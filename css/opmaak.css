@@ -45,7 +45,7 @@ textarea {
 
 textarea.short{height: 100px;}
 textarea.medium{height: 150px;}
-textarea.long{height: 600px;}
+textarea.long{height: 300px;}
 
 label {
     font-weight: 600;
@@ -335,4 +335,12 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 .container_helpdesk {
     padding-top: 120px;
+}
+
+#page_profile .container {
+    padding-bottom: 80px;
+}
+
+.page_profileadjust {
+    padding: 70px 0 120px;
 }
