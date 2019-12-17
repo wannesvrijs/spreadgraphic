@@ -8,8 +8,6 @@ if ( $_POST["submitbutton2"] == "Spread!" )
 {
     $file = $_FILES['use_picture'];
 
-    var_dump($file);
-
     $fileName = $file['name'];
     $fileTmpName = $file['tmp_name'];
     $fileSize = $file['size'];
@@ -44,8 +42,6 @@ if ( $_POST["submitbutton2"] == "Spread!" )
                     " use_education='" . htmlentities($_POST['use_education'], ENT_QUOTES) . "' 
                     WHERE use_id = " . $_SESSION['use']['use_id'];
 
-                echo $sql;
-
                 if (ExecuteSQL($sql)) {
                     $_SESSION["msg"][] = "your profile has been updated!";
                     header("location:".$maindirectory."profile.php");
@@ -67,5 +63,4 @@ if ( $_POST["submitbutton2"] == "Spread!" )
         header("location:".$maindirectory."profile_adjust.php");
     }
 }
-
 ?>
