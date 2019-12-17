@@ -2,6 +2,14 @@
 require_once "lib/autoload.php";
 BasicHead();
 ShowMessages();
+
+$timestamp = GetData("select gra_uploaddate, gra_id from graphic where gra_id = 2 ");
+var_dump($timestamp);
+
+$new_date = new DateTime($timestamp);
+echo $new_date->format('F d, Y');
+
+
 ?>
 
 <body id="page_index">
