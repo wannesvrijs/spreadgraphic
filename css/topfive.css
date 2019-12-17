@@ -22,16 +22,22 @@
 
 
 /* ELEMENT 1: nummer */
-#page_topfive .grid div:nth-of-type(1) {
+#page_topfive .grid div.nummerkes:nth-of-type(1) {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
+    text-align: center;
 }
-#page_topfive .grid div:nth-of-type(1) p {
+#page_topfive .grid div.nummerkes p {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 2em;
+}
+
+#page_topfive .grid div.nummerkes p.aantal_likes {
     font-family: 'Merriweather', serif;
     font-size: 4rem;
-    color: #1D1D1D;
+    color: #FF5100;
 }
 
     /* ELEMENT 2: afbeelding  */
