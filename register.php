@@ -8,7 +8,7 @@ if ( isset($_SESSION['use']) ) { $_SESSION["msg"][] = "you are already logged in
 BasicHead();
 ShowMessages();
 ?>
-<body class="main page_register">
+<body class="main page_register" id="page_register">
 <?php PrintNavBar(); ?>
 
 <div class="container">

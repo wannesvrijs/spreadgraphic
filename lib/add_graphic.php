@@ -24,7 +24,7 @@ if ( $_POST["submitbutton"] == "Spread!" )
 
     if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0) {
-            if ($fileSize < 500000) {
+            if ($fileSize < 2000000) {
                 $fileDestination = '../graphics/'. $fileNameNew;
 
 //-------------- verplaats file naar folder uploads

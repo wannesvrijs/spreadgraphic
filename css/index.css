@@ -129,20 +129,6 @@
      color: #FF5100;
  }
 
-#page_index .like_graphic:hover .fa-heart,
-#page_profile .like_graphic:hover .fa-heart
-{
-    display: inline;
-}
-
-#page_index a.like_graphic:visited,
-#page_index a.like_graphic:link,
-#page_profile a.like_graphic:visited,
-#page_profile a.like_graphic:link
-{
-    text-decoration: none;
-}
-
 
 #page_index .image_overlay_box .overlay .clickbaar_vlak a,
 #page_profile .image_overlay_box .overlay .clickbaar_vlak a
@@ -265,7 +251,6 @@
     font-size: 1.2rem;
     color: #FF5100;
 }
-
 
 #page_index a.like_graphic_popup:visited,
 #page_index a.like_graphic_popup:link {
