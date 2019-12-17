@@ -1,13 +1,59 @@
-
+<!-- afbeelding + overlay-->
 <div class="image_overlay_box">
-    <a href="#">
-        <img src="@@gra_image@@" alt="graphic poster" class="image_graphic">
-    </a>
+    <img src="/wdev_wannes/spreadgraphic/graphics/@@gra_image@@?id=@@gra_use_id@@" alt="graphic poster" class="image_graphic">
+    <div class="overlay">
+        <div class="overlay_hover_box">
+            <div class="rondeimage artist_image_overlay">
+                <a href="profile.php?id=@@gra_use_id@@">
+                    <img src="/wdev_wannes/spreadgraphic/profile_img/@@use_picture@@" alt="person">
+                    <p>@@use_firstname@@ @@use_name@@</p>
+                </a>
+            </div>
+            <a onclick="like_add(@@gra_id@@); return false" href="#" title="like" class="like_graphic">
+                <span id="graphic_@@gra_id@@_likes" class="@@liked@@ fa-heart"></span>
+            </a>
+            <form action="lib/deletefile.php" method="post">
+                <input type="hidden" name="gra_id" value="@@gra_id@@">
+                <input class="button" name="deletebutton" type="submit" value="delete">
+            </form>
+            <div class="clickbaar_vlak">
+                <a href="#popup_graphic2?id=@@gra_id@@"></a>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-
-
-
-
-
+<!-- pop-up graphic detail -->
+<div id="popup_graphic2?id=@@gra_id@@" class="overlay_graphicdetail">
+    <div class="popup_graphicdetail">
+        <section class="grid">
+            <div><img  src="/wdev_wannes/spreadgraphic/graphics/@@gra_image@@?id=@@gra_id@@" alt="#"></div>
+            <div class="graphicdetail">
+                <p>@@gra_description@@</p>
+                <p><span>Materials/techniques:</span>@@mat_kind@@</p>
+                <p><span>Posted: </span>@@gra_uploaddate@@</p>
+                <p class="tags">@@gra_tags@@</p>
+                <a onclick="like_add(@@gra_id@@); return false" href="#" title="like" class="like_graphic_popup">
+                    <span id="graphic_@@gra_id@@_likes" class="@@liked@@ fa-heart"></span>
+                    I like this!
+                </a>
+                <form action="lib/deletefile.php" method="post">
+                    <input type="hidden" name="gra_id" value="@@gra_id@@">
+                    <input class="button" name="deletebutton" type="submit" value="delete">
+                </form>
+            </div>
+            <div class="artisttext">
+                <div class="rondeimage">
+                    <a href="profile.php?id=@@use_id@@">
+                        <img src="/wdev_wannes/spreadgraphic/profile_img/@@use_picture@@?id=@@gra_use_id@@" alt="person">
+                    </a>
+                </div>
+                <ul>
+                    <li>@@use_firstname@@ @@use_name@@</li>
+                    <li>@@use_caption@@</li>
+                </ul>
+            </div>
+        </section>
+        <a class="close" href="">&times;</a>
+    </div>
+</div>

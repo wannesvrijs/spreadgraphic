@@ -55,13 +55,12 @@
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
     border-radius: 20px/50px;
-    text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
     text-decoration: underline;
 }
 
-#page_profile .overlay {
+#page_profile .overlay_readmore {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -73,7 +72,7 @@
     opacity: 0;
     z-index: 2;
 }
-#page_profile .overlay:target {
+#page_profile .overlay_readmore:target {
     visibility: visible;
     opacity: 1;
 }
@@ -83,7 +82,7 @@
     padding: 20px;
     background: white;
     width: 70%;
-    height:60%;
+    height:70%;
     position: relative;
     transition: all 5s ease-in-out;
 }
@@ -186,4 +185,7 @@
     text-decoration: none;
 }
 
+#page_profile .graphicdetail form {
+    margin-top: 30px;
+}
 
