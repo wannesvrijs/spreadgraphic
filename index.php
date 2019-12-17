@@ -45,7 +45,13 @@ if(isset($_POST['search'])) {
     </div>
     <section>
         <?php
-        $data = GetData("select * from graphic inner join users on gra_use_id = use_id ORDER BY gra_uploaddate DESC");
+        $data = GetData("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind
+            FROM graphic
+            inner join users on gra_use_id = use_id
+            inner join gramat on gra_id = gramat_gra_id
+            inner join material on gramat_mat_id = mat_id
+            GROUP BY gra_id, gra_uploaddate
+            ORDER BY gra_uploaddate DESC;");
         $template = LoadTemplate("index");
         print ReplaceContentindex( $data, $template);
         ?>
