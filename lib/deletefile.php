@@ -15,8 +15,8 @@ if (unlink($path)) {
     if (ExecuteSQL($sql)) {
         header("Location:".$maindirectory."profile.php");
     } else {
-        die('image weg, data niet');
+        $_SESSION["msg"][] = "Image could not be deleted!";
     }
 } else {
-    die('image niet weg ook data niet');
+    $_SESSION["msg"][] = "Image could not be unlinked from database";
 }

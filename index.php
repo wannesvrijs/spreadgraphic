@@ -33,8 +33,8 @@ ShowMessages();
         if(isset($_POST['search'])) {
             $searchq = $_POST['search'];
             $result = GetData ("SELECT * FROM graphic WHERE gra_tags LIKE '%$searchq%'");
-            if(!isset($result)) {
-                $_POST["msg"][] = "There are no such tags!"; // dit werkt nog niet
+            if(count($result) == 0) {
+                $_SESSION["msg"][] = "There are no such tags!";
 
                 $data = GetData("select *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind from graphic $sqljoin GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
                 $template = LoadTemplate("index");
@@ -44,15 +44,9 @@ ShowMessages();
                 $template = LoadTemplate("index");
                 print ReplaceContentindex( $data, $template);
             }
-            if($row['COUNT(*)'] == 0 ){
-                $output = 'There are no results';
-            } else {
-                while($row = mysqli_fetch_assoc($data_search)) {
-                    $output .= ' wtf is dees';
-                }
-            }
+
         } else {
-            $data = GetData("select * from graphic $sqljoin GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
+            $data = GetData("select *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind from graphic $sqljoin GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
             $template = LoadTemplate("index");
             print ReplaceContentindex( $data, $template);
         }
