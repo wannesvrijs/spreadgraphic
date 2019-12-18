@@ -26,17 +26,10 @@ ShowMessages();
         //ZOEKBALK
         if(isset($_POST['search'])) {
             $searchq = $_POST['search'];
-            $result = GetData ("SELECT * FROM graphic WHERE gra_tags LIKE '%$searchq%'");
-            if(count($result) == 0) {
-                $_SESSION["msg"][] = "There are no such tags!";
-                $data = GetData("select *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind from graphic $sqljoin GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
-                $template = LoadTemplate("index");
-                print ReplaceContentindex( $data, $template);
-            } else {
-                $data = GetData ("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind FROM graphic $sqljoin WHERE gra_tags LIKE '%$searchq%' GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
-                $template = LoadTemplate("index");
-                print ReplaceContentindex( $data, $template);
-            }
+
+            $data = GetData ("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind FROM graphic $sqljoin WHERE gra_tags LIKE '%$searchq%' GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
+            $template = LoadTemplate("index");
+            print ReplaceContentindex( $data, $template);
 
         } else {
             $data = GetData("select *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind from graphic $sqljoin GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
