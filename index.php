@@ -27,12 +27,12 @@ ShowMessages();
 
             $data = GetData ("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind FROM graphic $sqljoin WHERE gra_tags LIKE '%$searchq%' GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
             $template = LoadTemplate("index");
-            print ReplaceContentindex( $data, $template);
+            print ReplaceContentIndex( $data, $template);
 
         } else {
             $data = GetData("select *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind from graphic $sqljoin GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
             $template = LoadTemplate("index");
-            print ReplaceContentindex( $data, $template);
+            print ReplaceContentIndex( $data, $template);
         }
         ?>
     </section>
