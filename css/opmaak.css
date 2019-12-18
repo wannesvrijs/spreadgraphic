@@ -388,7 +388,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 #page_index .zoekbalk {
     display: flex;
     justify-content: center;
-    margin-top: 300px;
+    margin-top: 90px;
 }
 
 #page_index .zoekbalk input {
