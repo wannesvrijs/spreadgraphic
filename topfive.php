@@ -10,7 +10,12 @@ ShowMessages();
             <h1>These are our top five graphics this week. Get inspired…</h1>
 
             <?php
-            $data = GetData("select COUNT(like_id) AS aantal_likes, gra_image, gra_description, gra_tags, gra_uploaddate, use_caption, use_firstname, use_name, use_picture, use_id from graphic INNER JOIN likes ON like_gra_id = gra_id INNER JOIN users ON gra_use_id = use_id GROUP BY gra_id ORDER BY aantal_likes DESC LIMIT 5;");
+
+            $sqljoin =  'inner join users on gra_use_id = use_id
+                    inner join gramat on gra_id = gramat_gra_id
+                    inner join material on gramat_mat_id = mat_id';
+
+            $data = GetData("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind FROM graphic $sqljoin GROUP BY gra_id, gra_likes ORDER BY gra_likes DESC LIMIT 5;");
             $template = LoadTemplate("topfive");
             print ReplaceContent( $data, $template);
             ?>
