@@ -1,19 +1,13 @@
-
 /* footer */
-
 footer {
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
-footer ul {
-    display: flex;
-}
+footer ul {display: flex;}
 
-footer ul li {
-    list-style: none;
-}
+footer ul li {list-style: none;}
 
 footer ul li a {
     display: inline-block;
@@ -25,6 +19,4 @@ footer ul li a {
 }
 
 #page_index .container,
-#page_topfive .container{
-    padding-bottom: 80px;
-}
+#page_topfive .container{padding-bottom: 80px;}

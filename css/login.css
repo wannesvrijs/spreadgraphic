@@ -8,20 +8,10 @@
     color: #FF5100;
 }
 
-#page_login footer ul li a{
-    color: white;
-}
+#page_login footer ul li a{color: white;}
 
-#page_login nav ul li a {
-    color: white;
-}
+#page_login nav ul li a {color: white;}
 
-#page_login .container {
-    margin-top: 130px;
+#page_login .container {margin-top: 130px;}
 
-}
-
-body #page_login {
-    padding-bottom: -50px;
-}
-
+body #page_login {padding-bottom: -50px;}

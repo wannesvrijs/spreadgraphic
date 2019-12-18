@@ -31,9 +31,7 @@ h1 {
 }
 
 
-h2 {
-    font-family: 'Merriweather', serif;
-}
+h2 {font-family: 'Merriweather', serif;}
 
 a {
     color: #FF5100;
@@ -46,7 +44,6 @@ p {
 }
 
 /* forms */
-
 input {
     outline: none;
     font-family: 'Source Sans Pro', sans-serif;
