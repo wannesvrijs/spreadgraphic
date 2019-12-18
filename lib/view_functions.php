@@ -75,6 +75,13 @@ function ReplaceContent( $data, $template_html )
         }
 
         foreach ($row as $field => $value) {
+
+            //dateformat
+            if ($field == 'gra_uploaddate') {
+                $new_date = new DateTime($value);
+                $value = $new_date->format('F d, Y');
+            }
+
             $content = str_replace("@@$field@@", $value, $content);
         }
         $returnval .= $content;
@@ -104,6 +111,13 @@ function ReplaceContentIndex( $data, $template_html )
         }
 
         foreach ($row as $field => $value) {
+
+            //dateformat
+            if ($field == 'gra_uploaddate') {
+                $new_date = new DateTime($value);
+                $value = $new_date->format('F d, Y');
+            }
+
             $content = str_replace("@@$field@@", $value, $content);
         }
         $returnval .= $content;

@@ -13,13 +13,6 @@ function previously_liked($gra_id) {
     $gra_id = (int)$gra_id;
     if (GetData("select count(*) as count from likes where like_gra_id = $gra_id and like_use_id =".$_SESSION['use']['use_id'])[0]['count'] == 0) return false;
     else return true;
-
-}
-
-// haal het aantal likes op dat word bijgehouden binnen de graphics table
-function like_count($gra_id) {
-    $gra_id = (int)$gra_id;
-    return GetData("select * from graphic where gra_id = $gra_id")[0]['gra_likes'];
 }
 
 //voeg een tabel toe aan de likes tabel bij een like, voeg 1tje toe aan het totaal aantal likes en trek terug af indien er reeds geliked is
