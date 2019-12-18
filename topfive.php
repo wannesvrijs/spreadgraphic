@@ -15,7 +15,7 @@ ShowMessages();
                     inner join gramat on gra_id = gramat_gra_id
                     inner join material on gramat_mat_id = mat_id';
 
-            $data = GetData("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind FROM graphic $sqljoin GROUP BY gra_id, gra_likes ORDER BY gra_likes DESC LIMIT 5;");
+            $data = GetData("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind FROM graphic $sqljoin WHERE gra_uploaddate >= CURRENT_TIMESTAMP - INTERVAL 7 DAY GROUP BY gra_id, gra_likes ORDER BY gra_likes DESC LIMIT 5;");
             $template = LoadTemplate("topfive");
             print ReplaceContent( $data, $template);
             ?>
