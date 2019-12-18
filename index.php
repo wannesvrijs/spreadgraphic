@@ -38,6 +38,10 @@ ShowMessages();
         }
         ?>
     </section>
+    <!-- go to top knop -->
+    <a href="#" id="goToTop">
+        <span class="fa fa-arrow-circle-up"></span>
+    </a>
 </div>
 
 <?php PrintFooter(); ?>

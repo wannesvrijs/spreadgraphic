@@ -32,14 +32,9 @@
     text-transform: capitalize;
 }
 
-#page_profile .grid_artistpage div p.name span  {
-    display: none;
-}
+#page_profile .grid_artistpage div p.name span  {display: none;}
 
-
-#page_profile .grid_artistpage div p.visible {
-    margin-left: 2em;
-}
+#page_profile .grid_artistpage div p.visible {margin-left: 2em;}
 
 #page_profile .grid_artistpage div p.visible span  {
     display: inline-block;
@@ -47,11 +42,7 @@
     font-size: 1.5em;
 }
 
-#page_profile .grid_artistpage div p.visible span:hover  {
-    color: black;
-}
-
-
+#page_profile .grid_artistpage div p.visible span:hover  {color: black;}
 
 /* ELEMENT 3: read more */
 #page_profile .grid_artistpage .profile_readmore {
@@ -124,9 +115,7 @@
     color: black;
 }
 
-#page_profile .popup .popup_text p {
-    width: 300px;
-}
+#page_profile .popup .popup_text p {width: 300px;}
 
 #page_profile .popup .education {
     margin-bottom: 3em;
@@ -136,7 +125,6 @@
 #page_profile .popup .about {
     display: flex;
     justify-content: flex-end;
-
 }
 
 #page_profile .popup .close {
@@ -149,9 +137,7 @@
     text-decoration: none;
     color: #FF5110
 }
-#page_profile .popup .close:hover {
-    color: black;
-}
+#page_profile .popup .close:hover {color: black;}
 
 /* ELEMENT 4: social */
 #page_profile .grid_artistpage .profile_social {
@@ -186,21 +172,12 @@
     margin: 220px 155px;
 }
 
-#page_profile section a.add_graphic_here:hover {
-    border: 5px solid #FF5100;
-}
-#page_profile section a.add_graphic_here:hover span {
-    color: #FF5100;
-}
+#page_profile section a.add_graphic_here:hover {border: 5px solid #FF5100;}
+#page_profile section a.add_graphic_here:hover span {color: #FF5100;}
 
 #page_profile section a.profile_underline:visited,
 #page_profile section a.profile_underline:link,
 #page_profile .profile_social a.profile_underline:visited,
-#page_profile .profile_social a.profile_underline:link {
-    text-decoration: none;
-}
+#page_profile .profile_social a.profile_underline:link {text-decoration: none;}
 
-#page_profile .graphicdetail form {
-    margin-top: 30px;
-}
-
+#page_profile .graphicdetail form {margin-top: 30px;}
