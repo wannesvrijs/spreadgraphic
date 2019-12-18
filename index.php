@@ -13,7 +13,7 @@ ShowMessages();
     <div class="zoekbalk">
         <form action="index.php" method="POST">
             <input type="text" name="search" placeholder="#">
-            <button type="submit" name="submit_search" class="fas fa-search" ></button>
+            <button type="submit" name="submit_search" class="fa fa-search" ></button>
         </form>
     </div>
     <section>

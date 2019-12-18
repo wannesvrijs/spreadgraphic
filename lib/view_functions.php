@@ -101,8 +101,8 @@ function ReplaceContentIndex( $data, $template_html )
         $content = $template_html;
 
         //haal de info op of de graphic reeds geliked is voeg de klasse toe aan de data
-        if (previously_liked($row['gra_id'])) $row['liked'] = 'fas fa-heart';
-        else $row['liked'] = 'far fa-heart';
+        if (previously_liked($row['gra_id'])) $row['liked'] = 'fa fa-heart-o';
+        else $row['liked'] = 'fa fa-heart';
 
         //zorg dat je enkel eigen werk kan verwijderen
         if (IsMe()) {
