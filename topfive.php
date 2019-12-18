@@ -5,7 +5,6 @@ ShowMessages();
 ?>
     <body id="page_topfive">
     <?php PrintNavBar(); ?>
-    <!-- pagina titel -->
         <div class="container">
             <h1>These are our top five graphics this week. Get inspired…</h1>
 
