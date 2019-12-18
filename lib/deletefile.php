@@ -14,9 +14,10 @@ $sql = "Delete from graphic where gra_id = $gra_id;
 if (unlink($path)) {
     if (ExecuteSQL($sql)) {
         header("Location:".$maindirectory."profile.php");
+        $_SESSION["msg"][] = "Graphic deleted!";
     } else {
-        $_SESSION["msg"][] = "Image could not be deleted!";
+        $_SESSION["msg"][] = "Graphic could not be deleted!";
     }
 } else {
-    $_SESSION["msg"][] = "Image could not be unlinked from database";
+    $_SESSION["msg"][] = "Graphic could not be unlinked from database";
 }
