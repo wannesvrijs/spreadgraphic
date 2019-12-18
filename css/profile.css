@@ -176,17 +176,20 @@
     margin-bottom: 1em;
     display: inline-block;
     width: 100%;
-    border: 5px solid #FF5100;
+    border: 5px solid #E6E6E6;
 }
 
 #page_profile section a.add_graphic_here span {
-    color: #FF5100;
+    color: #E6E6E6;
     font-size: 4em;
-    margin: 250px 155px;
+    margin: 220px 155px;
 }
 
 #page_profile section a.add_graphic_here:hover {
-    border: 5px solid black;
+    border: 5px solid #FF5100;
+}
+#page_profile section a.add_graphic_here:hover span {
+    color: #FF5100;
 }
 
 #page_profile section a.profile_underline:visited,
