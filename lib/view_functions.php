@@ -112,10 +112,11 @@ function ReplaceContentIndex( $data, $template_html )
         }
 
         //zorg dat je niet-inloggers geen like button of delete hebben
-        if (!isset($_SESSION['use'])) {
+        if (!isset($_SESSION['use']) or !IsMe()) {
             $row['delete'] = '';
-            $row['permission'] = 'denied';
         }
+        if (!isset($_SESSION['use'])) $row['permission'] = 'denied';
+
 
 
         foreach ($row as $field => $value) {
