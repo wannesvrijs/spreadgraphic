@@ -22,6 +22,7 @@ function PrintFooter()
 ------------------------------------------------------------------------*/
 function PrintNavBar()
 {
+    //custom menu (ingelogd of niet ingelogd)
     if ( ! isset($_SESSION['use'])) $data = GetData("select * from menu where men_id between 1 and 3 order by men_order");
     else $data = GetData("select * from menu where men_id <> 3 order by men_order");
 
