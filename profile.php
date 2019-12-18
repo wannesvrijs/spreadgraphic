@@ -15,7 +15,7 @@ ShowMessages();
                 }
                 $data = GetData("select * from users where use_id='" . $data_id . "'");
                 $template = LoadTemplate("profile_top");
-                print ReplaceContentindex( $data, $template);
+                print ReplaceContent( $data, $template);
             ?>
             <section>
             <?php
@@ -28,7 +28,7 @@ ShowMessages();
                     where gra_use_id = '".$data_id."'
                     GROUP BY gra_id, gra_uploaddate
                     ORDER BY gra_uploaddate DESC;");
-                $template = LoadTemplate("index");
+                $template = LoadTemplate("profile");
                 print ReplaceContentindex( $data, $template);
             ?>
             </section>

@@ -68,6 +68,12 @@ function ReplaceContent( $data, $template_html )
     foreach ($data as $row) {
         //replace fields with values in template
         $content = $template_html;
+
+        //custom klasse voor de top van de profile die zorgt dat settingsfunctie enkel op het eigen profiel zichtbaar zijn
+        if (IsMe()) {
+            $row['settings'] = 'visible';
+        }
+
         foreach ($row as $field => $value) {
             $content = str_replace("@@$field@@", $value, $content);
         }
@@ -78,6 +84,8 @@ function ReplaceContent( $data, $template_html )
 
 
 require_once 'like.php';
+
+//custom replacecontent die de likeknoppen juist insteld voor index en profile
 function ReplaceContentIndex( $data, $template_html )
 {
     $returnval = "";
@@ -85,8 +93,15 @@ function ReplaceContentIndex( $data, $template_html )
         //replace fields with values in template
         $content = $template_html;
 
-        if (previously_liked($row['gra_id'])) $row['liked'] = 'fas';
-        else $row['liked'] = 'far';
+        //haal de info op of de graphic reeds geliked is voeg de klasse toe aan de data
+        if (previously_liked($row['gra_id'])) $row['liked'] = 'fas fa-heart';
+        else $row['liked'] = 'far fa-heart';
+
+        //zorg dat je enkel eigen werk kan verwijderen
+        if (IsMe()) {
+            $row['action'] ='lib/deletefile.php';
+            $row['delete'] = '<button class="deletebutton fa fa-trash" name="deletebutton" type="submit" value="delete"></button>';
+        }
 
         foreach ($row as $field => $value) {
             $content = str_replace("@@$field@@", $value, $content);
@@ -95,6 +110,7 @@ function ReplaceContentIndex( $data, $template_html )
     }
     return $returnval;
 }
+
 
 /* DATA VAN DATABASE + TEMPLATE PRINTEN --> $row
 ------------------------------------------------------------------------*/

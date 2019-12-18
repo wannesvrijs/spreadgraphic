@@ -29,17 +29,28 @@
 #page_profile .grid_artistpage div p.name {
     font-size: 1.4rem;
     margin-bottom: 0.5em;
-    margin-left: 2em;
 }
 
 #page_profile .grid_artistpage div p.name span  {
+    display: none;
+}
+
+
+#page_profile .grid_artistpage div p.visible {
+    margin-left: 2em;
+}
+
+#page_profile .grid_artistpage div p.visible span  {
+    display: inline-block;
     margin-left: 0.5em;
     font-size: 1.5em;
 }
 
-#page_profile .grid_artistpage div p.name span:hover  {
+#page_profile .grid_artistpage div p.visible span:hover  {
     color: black;
 }
+
+
 
 /* ELEMENT 3: read more */
 #page_profile .grid_artistpage .profile_readmore {

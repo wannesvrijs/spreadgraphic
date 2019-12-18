@@ -10,11 +10,11 @@
                 </a>
             </div>
             <a onclick="like_add(@@gra_id@@); return false" href="#" title="like" class="like_graphic">
-                <span id="graphic_@@gra_id@@_likes" class="@@liked@@ fa-heart"></span>
+                <span class="graphic_@@gra_id@@_likes @@liked@@"></span>
             </a>
-            <form action="lib/deletefile.php" method="post">
+            <form action="@@action@@" method="post">
                 <input type="hidden" name="gra_id" value="@@gra_id@@">
-                <input class="button" name="deletebutton" type="submit" value="delete">
+                @@delete@@
             </form>
             <div class="clickbaar_vlak">
                 <a href="#popup_graphic2?id=@@gra_id@@"></a>
@@ -30,17 +30,13 @@
             <div><img  src="/wdev_wannes/spreadgraphic/graphics/@@gra_image@@?id=@@gra_id@@" alt="#"></div>
             <div class="graphicdetail">
                 <p>@@gra_description@@</p>
-                <p><span>Materials/techniques:</span>@@mat_kind@@</p>
+                <p><span>Materials/techniques: </span>@@mat_kind@@</p>
                 <p><span>Posted: </span>@@gra_uploaddate@@</p>
                 <p class="tags">@@gra_tags@@</p>
                 <a onclick="like_add(@@gra_id@@); return false" href="#" title="like" class="like_graphic_popup">
-                    <span id="graphic_@@gra_id@@_likes" class="@@liked@@ fa-heart"></span>
+                    <span class="graphic_@@gra_id@@_likes @@liked@@"></span>
                     I like this!
                 </a>
-                <form action="lib/deletefile.php" method="post">
-                    <input type="hidden" name="gra_id" value="@@gra_id@@">
-                    <input class="button" name="deletebutton" type="submit" value="delete">
-                </form>
             </div>
             <div class="artisttext">
                 <div class="rondeimage">

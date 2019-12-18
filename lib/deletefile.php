@@ -13,7 +13,7 @@ $sql = "Delete from graphic where gra_id = $gra_id;
 
 if (unlink($path)) {
     if (ExecuteSQL($sql)) {
-        header("Location:".$maindirectory."index.php");
+        header("Location:".$maindirectory."profile.php");
     } else {
         die('image weg, data niet');
     }
