@@ -17,7 +17,7 @@ ShowMessages();
 
             $data = GetData("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind FROM graphic $sqljoin WHERE gra_uploaddate >= CURRENT_TIMESTAMP - INTERVAL 7 DAY GROUP BY gra_id, gra_likes ORDER BY gra_likes DESC LIMIT 5;");
             $template = LoadTemplate("topfive");
-            print ReplaceContent( $data, $template);
+            print ReplaceContentTopFive( $data, $template);
             ?>
 
         </div>

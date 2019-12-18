@@ -50,8 +50,7 @@
 
 #page_topfive .grid div:nth-of-type(2) img{
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    top: 0;
 }
 
 /* ELEMENT 3: leeg item tussen beschrijving en afbeelding */

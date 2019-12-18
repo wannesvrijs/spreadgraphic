@@ -134,6 +134,33 @@ function ReplaceContentIndex( $data, $template_html )
 }
 
 
+function ReplaceContentTopFive( $data, $template_html )
+{
+    $i = 1;
+    $returnval = "";
+    foreach ($data as $row) {
+        //replace fields with values in template
+        $content = $template_html;
+
+        //voeg nummering toe
+        $row['number'] = $i;
+        $i = $i+1;
+
+        foreach ($row as $field => $value) {
+
+            //dateformat
+            if ($field == 'gra_uploaddate') {
+                $new_date = new DateTime($value);
+                $value = $new_date->format('F d, Y');
+            }
+
+            $content = str_replace("@@$field@@", $value, $content);
+        }
+        $returnval .= $content;
+    }
+    return $returnval;
+}
+
 /* DATA VAN DATABASE + TEMPLATE PRINTEN --> $row
 ------------------------------------------------------------------------*/
 function ReplaceContentOneRow( $row, $template_html )
