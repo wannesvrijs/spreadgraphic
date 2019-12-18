@@ -3,11 +3,6 @@ require_once "lib/autoload.php";
 BasicHead();
 ShowMessages();
 
-$timestamp = GetData("select gra_uploaddate from graphic where gra_id = 2 ")[0]['gra_uploaddate'];
-
-$new_date = new DateTime($timestamp);
-echo $new_date->format('F d, Y');
-
 
 ?>
 
@@ -36,20 +31,17 @@ echo $new_date->format('F d, Y');
                 $_SESSION["msg"][] = "There are no such tags!";
                 $data = GetData("select *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind from graphic $sqljoin GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
                 $template = LoadTemplate("index");
-                if (isset($_SESSION['use'])) echo ReplaceContentindex( $data, $template);
-                else print ReplaceContent( $data, $template);
+                print ReplaceContentindex( $data, $template);
             } else {
                 $data = GetData ("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind FROM graphic $sqljoin WHERE gra_tags LIKE '%$searchq%' GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
                 $template = LoadTemplate("index");
-                if (isset($_SESSION['use'])) echo ReplaceContentindex( $data, $template);
-                else print ReplaceContent( $data, $template);
+                print ReplaceContentindex( $data, $template);
             }
 
         } else {
             $data = GetData("select *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind from graphic $sqljoin GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC");
             $template = LoadTemplate("index");
-            if (isset($_SESSION['use'])) echo ReplaceContentindex( $data, $template);
-            else print ReplaceContent( $data, $template);
+            print ReplaceContentindex( $data, $template);
         }
         ?>
     </section>

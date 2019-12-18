@@ -106,6 +106,7 @@
     line-height: 50px;
     margin: 0 0 0 60px;
     font-size: 1rem;
+    text-transform: capitalize;
  }
 
 #page_index .artist_image_overlay a,
@@ -318,8 +319,10 @@
 #page_index .grid .artisttext ul li:first-child,
 #page_profile .grid .artisttext ul li:first-child {
     font-size: 1.2em;
+    text-transform: capitalize;
 }
 
-
-
+.denied {
+    display: none;
+}
 

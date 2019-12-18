@@ -9,6 +9,7 @@ function ShowMessages()
     //weergeven messages
     if (isset($_SESSION["msg"]))
     {
+        echo "<div class = 'messagecontainer'>";
 
         foreach( $_SESSION["msg"] as $message )
         {
@@ -16,6 +17,9 @@ function ShowMessages()
             $template = LoadTemplate("messages");
             print ReplaceContentOneRow( $row, $template );
         }
+
+        echo "</div>";
+
 
         unset($_SESSION['msg']);
     }

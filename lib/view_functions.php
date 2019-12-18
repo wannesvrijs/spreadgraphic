@@ -107,9 +107,16 @@ function ReplaceContentIndex( $data, $template_html )
 
         //zorg dat je enkel eigen werk kan verwijderen
         if (IsMe()) {
-            $row['action'] ='lib/deletefile.php';
+            $row['action'] = 'lib/deletefile.php';
             $row['delete'] = '<button class="deletebutton fa fa-trash" name="deletebutton" type="submit" value="delete"></button>';
         }
+
+        //zorg dat je niet-inloggers geen like button of delete hebben
+        if (!isset($_SESSION['use'])) {
+            $row['delete'] = '';
+            $row['permission'] = 'denied';
+        }
+
 
         foreach ($row as $field => $value) {
 

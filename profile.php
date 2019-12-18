@@ -31,8 +31,7 @@ ShowMessages();
                 if (IsMe()) echo"<a href='add_graphic.php' class='profile_underline add_graphic_here'><span class='fas fa-plus'></span></a>";
                 $data = GetData("SELECT *, GROUP_CONCAT(mat_kind SEPARATOR ', ') as mat_kind FROM graphic $sqljoin where gra_use_id = '".$data_id."'GROUP BY gra_id, gra_uploaddate ORDER BY gra_uploaddate DESC;");
                 $template = LoadTemplate("profile");
-                if (isset($_SESSION['use'])) echo ReplaceContentindex( $data, $template);
-                else print ReplaceContent( $data, $template);
+                print ReplaceContentindex( $data, $template);
             ?>
             </section>
         </div>

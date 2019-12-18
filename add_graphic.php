@@ -5,7 +5,8 @@ require_once "lib/autoload.php";
 if ( ! isset($_SESSION['use']) ) { $_SESSION["msg"][] = "Create an account to add graphics!"; header("Location: index.php"); exit; }
 
 BasicHead();
-ShowMessages();
+echo
+    ShowMessages();
 ?>
 <body class="main page_addgraphic">
 <?php PrintNavBar(); ?>

@@ -29,6 +29,7 @@
 #page_profile .grid_artistpage div p.name {
     font-size: 1.4rem;
     margin-bottom: 0.5em;
+    text-transform: capitalize;
 }
 
 #page_profile .grid_artistpage div p.name span  {

@@ -1,11 +1,46 @@
 /*css bij ...*/
 
+/*main styling-----------------------------  (messages) */
+.messagecontainer {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+
 .message {
-    background: #FF6117;
+    background: #777;
     font: 400 100%/1.4 "Source Sans Pro", sans-serif;
     color: white;
     padding: .5em 2em;
+    width: 100%;
+    animation: fadeout 3s forwards;
+    -moz-animation: fadeout 3s forwards; /* Firefox */
+    -webkit-animation: fadeout 3s forwards; /* Safari and Chrome */
+    -o-animation: fadeout 3s forwards; /* Opera */
 }
+
+@keyframes fadeout {
+    0%   { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes fadeout { /* Firefox */
+    0%   { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+    0%   { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-o-keyframes fadeout { /* Opera */
+    0%   { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
 
 /*main styling----------------------------- */
 main {
@@ -184,6 +219,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 .loginform li p {
     padding: 0 25px;
+    line-height: 1.3em;
     font-size: 0.8rem;
 }
 
