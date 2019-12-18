@@ -153,6 +153,7 @@
     height: 450px;
     display: block;
     margin-top: 20px;
+
 }
 
 /* pop-up */
@@ -212,9 +213,8 @@
 #page_index section.grid,
 #page_profile section.grid {
     display: grid;
-    grid-template-rows: 430px 70px;
+    grid-template-rows: 420px 70px;
     grid-template-columns: 1fr 5fr 5fr 1fr;
-    margin: 20px auto 0 auto;
 }
 
 /* ELEMENT 1: afbeelding  */
