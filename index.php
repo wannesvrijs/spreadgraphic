@@ -22,8 +22,6 @@ ShowMessages();
         $sqljoin =  'inner join users on gra_use_id = use_id
                     inner join gramat on gra_id = gramat_gra_id
                     inner join material on gramat_mat_id = mat_id';
-
-        //ZOEKBALK
         if(isset($_POST['search'])) {
             $searchq = $_POST['search'];
 
