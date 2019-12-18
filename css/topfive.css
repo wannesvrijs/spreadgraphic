@@ -51,7 +51,7 @@
 #page_topfive .grid div:nth-of-type(2) img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* ELEMENT 3: leeg item tussen beschrijving en afbeelding */
@@ -124,9 +124,11 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1em;
     list-style: none;
+    line-height: 1.3em;
 }
 #page_topfive .grid .artisttext ul li:first-child {
     font-size: 1.4em;
+    text-transform: capitalize;
 }
 
 
