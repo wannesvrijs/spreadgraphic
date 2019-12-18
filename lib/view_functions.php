@@ -48,7 +48,6 @@ function PrintNavBar()
         else $template_navbar = LoadTemplate("navbar");
 
         print ReplaceContentOneRow($data, $template_navbar);
-
 }
 
 /* TEMPLATE OPHALEN
